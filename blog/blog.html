@@ -2,28 +2,497 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Blog | GesundheitProfi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesundheit Blog - Wissenschaftliche Gesundheitstipps | GesundheitProfi</title>
+    <meta name="description" content="Entdecken Sie wissenschaftlich fundierte Gesundheitstipps, Ernährungsratgeber und evidenzbasierte Strategien für ein gesünderes Leben.">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZZND0S6EPD');
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
+    <style>
+    :root {
+        --primary: #dc3545;
+        --primary-dark: #b02a37;
+        --secondary: #1a1a2e;
+        --accent: #27ae60;
+        --light: #f8f9fc;
+        --text: #2c3e50;
+        --text-light: #6c757d;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
+    }
+    
+    * {margin:0;padding:0;box-sizing:border-box;}
+    
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.7;
+        color: var(--text);
+        background: var(--light);
+    }
+    
+    .header {
+        background: var(--white);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+    }
+    
+    .nav-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+        color: var(--primary);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, var(--secondary) 0%, #2d3a5c 100%);
+        color: var(--white);
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('https://images.pexels.com/photos/1546165/pexels-photo-1546165.jpeg') center/cover;
+        opacity: 0.2;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+        opacity: 0.9;
+    }
+    
+    .categories {
+        padding: 60px 0;
+        background: var(--white);
+    }
+    
+    .categories-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .section-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-header p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+    }
+    
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 20px;
+    }
+    
+    .category-card {
+        background: var(--light);
+        padding: 25px 20px;
+        border-radius: var(--radius);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: 2px solid transparent;
+    }
+    
+    .category-card:hover, .category-card.active {
+        border-color: var(--primary);
+        transform: translateY(-5px);
+    }
+    
+    .category-card .icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+    }
+    
+    .category-card h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .category-card span {
+        color: var(--text-light);
+        font-size: 0.85rem;
+    }
+    
+    .posts-section {
+        padding: 80px 0;
+    }
+    
+    .posts-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 30px;
+    }
+    
+    .post-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.4s;
+        text-decoration: none;
+        color: inherit;
+    }
+    
+    .post-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .post-image {
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .post-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    
+    .post-card:hover .post-image img {
+        transform: scale(1.05);
+    }
+    
+    .post-content {
+        padding: 25px;
+    }
+    
+    .post-category {
+        display: inline-block;
+        background: var(--light);
+        color: var(--primary);
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .post-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    
+    .post-content p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        font-size: 0.85rem;
+        color: var(--text-light);
+    }
+    
+    .read-more {
+        color: var(--primary);
+        font-weight: 600;
+    }
+    
+    .footer {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .footer p {
+        opacity: 0.8;
+    }
+    
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        
+        .hero {
+            padding: 60px 0;
+        }
+        
+        .posts-grid, .category-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .posts-container, .categories-container {
+            padding: 0 20px;
+        }
+    }
+    </style>
 </head>
 <body>
-    <h1>Gesundheit Blog</h1>
-    <ul id="post-list">
-        <li><a href="post-en-07.html">Strong Bones After 40</a></li>
-        <li><a href="post-en-06.html">Sleep - The Underrated Muscle Booster</a></li>
-        <li><a href="post-en-05.html">Healthy Eating Made Simple</a></li>
-        <li><a href="post-en-04.html">Staying Vital After 40</a></li>
-        <li><a href="post-en-03.html">Health Tips for Men Over 40</a></li>
-        <li><a href="post-en-02.html">Natural Energy Without Coffee Crash</a></li>
-        <li><a href="post-en-01.html">Building Muscle After 40 - Yes, It's Possible!</a></li>
-        <li><a href="post-de-10.html">Wasser trinken - Der einfachste Gesundheitstipp</a></li>
-        <li><a href="post-de-09.html">Knochen stärken nach 40</a></li>
-        <li><a href="post-de-08.html">Schlaf - Der unterschätzte Muskel-Booster</a></li>
-        <li><a href="post-de-07.html">Gesunde Ernährung einfach gemacht</a></li>
-        <li><a href="post-de-06.html">Vitalität nach 40 - So geht's</a></li>
-        <li><a href="post-de-05.html">Gesundheitstipps für Männer ab 40</a></li>
-        <li><a href="post-de-04.html">Pilates für Frauen ab 40</a></li>
-        <li><a href="post-de-03.html">Natürliche Energie ohne Kaffee-Crash</a></li>
-        <li><a href="post-de-02.html">Aminosäuren für bessere Regeneration</a></li>
-        <li><a href="post-de-01.html">Bauchmuskeln trainieren ab 40</a></li>
-    </ul>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">GesundheitProfi</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Startseite</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#products">Produkte</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>💡 Gesundheit Blog</h1>
+            <p>Wissenschaftlich fundierte Gesundheitstipps für ein besseres Leben</p>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="categories-container">
+            <div class="section-header">
+                <h2>Themen entdecken</h2>
+                <p>Wählen Sie einen Bereich, der Sie interessiert</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card active">
+                    <div class="icon">💪</div>
+                    <h3>Fitness & Kraft</h3>
+                    <span>12 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🥗</div>
+                    <h3>Ernährung</h3>
+                    <span>15 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">😴</div>
+                    <h3>Schlaf & Erholung</h3>
+                    <span>8 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🧘</div>
+                    <h3>Stress & Mental</h3>
+                    <span>10 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🦴</div>
+                    <h3>Gesundheit 40+</h3>
+                    <span>14 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🧬</div>
+                    <h3>Wissenschaft</h3>
+                    <span>6 Artikel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts -->
+    <section class="posts-section">
+        <div class="posts-container">
+            <div class="section-header">
+                <h2>Neueste Artikel</h2>
+                <p>Aktuelle Erkenntnisse und praktische Tipps</p>
+            </div>
+            
+            <div class="posts-grid">
+                <!-- Featured Post -->
+                <a href="bauchmuskeln-trainieren-ab-40.html" class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Muskeln aufbauen">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">💪 Fitness</span>
+                        <h3>Bauchmuskeln trainieren ab 40: Der wissenschaftliche Guide</h3>
+                        <p>Mit dem richtigen Ansatz ist Muskelaufbau in jedem Alter möglich. Wissenschaftlich fundiert mit Studien.</p>
+                        <div class="post-meta">
+                            <span>11.02.2026</span>
+                            <span class="read-more">Weiterlesen →</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Post 2 -->
+                <a href="natürliche-energie.html" class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Natürliche Energie">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">⚡ Energie</span>
+                        <h3>Natürliche Energie steigern: Ohne Kaffee!</h3>
+                        <p>Entdecken Sie wissenschaftlich fundierte Methoden für ganztägige Energie ohne den berüchtigten Absturz.</p>
+                        <div class="post-meta">
+                            <span>11.02.2026</span>
+                            <span class="read-more">Weiterlesen →</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Post 3 -->
+                <a href="pilates-für-frauen.html" class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" alt="Pilates">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🧘 Pilates</span>
+                        <h3>Pilates für Frauen: Der komplette Guide</h3>
+                        <p>Warum Pilates die perfekte Trainingsmethode für Frauen jeden Alters ist. Mit Übungsplan.</p>
+                        <div class="post-meta">
+                            <span>10.02.2026</span>
+                            <span class="read-more">Weiterlesen →</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Post 4 -->
+                <a href="männer-gesundheit-40.html" class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3772509/pexels-photo-3772509.jpeg" alt="Männer Gesundheit">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🦴 Gesundheit 40+</span>
+                        <h3>Männer Gesundheit 40+: So bleiben Sie vital</h3>
+                        <p>Die wichtigsten Vorsorgeuntersuchungen und Gesundheitstipps speziell für Männer.</p>
+                        <div class="post-meta">
+                            <span>10.02.2026</span>
+                            <span class="read-more">Weiterlesen →</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Post 5 -->
+                <a href="aminosäuren-für-sportler.html" class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Aminosäuren">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🧬 Wissenschaft</span>
+                        <h3>Aminosäuren für Sportler: Was Sie wissen müssen</h3>
+                        <p>Die wissenschaftliche Basis: Welche Aminosäuren wirklich wirken.</p>
+                        <div class="post-meta">
+                            <span>09.02.2026</span>
+                            <span class="read-more">Weiterlesen →</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Post 6 -->
+                <a href="post-de-08.html" class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3779595/pexels-photo-3779595.jpeg" alt="Schlaf">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">😴 Schlaf</span>
+                        <h3>Schlaf - Der unterschätzte Muskel-Booster</h3>
+                        <p>Warum Schlaf der wichtigste Faktor für Muskelaufbau und Erholung ist.</p>
+                        <div class="post-meta">
+                            <span>08.02.2026</span>
+                            <span class="read-more">Weiterlesen →</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>GesundheitProfi</strong> – Ihr Partner für wissenschaftlich fundierte Gesundheitstipps</p>
+        <p style="font-size:0.85rem; margin-top:10px; opacity:0.7;">Hinweis: Dieser Blog dient der Information. Bei gesundheitlichen Fragen konsultieren Sie bitte einen Arzt.</p>
+    </footer>
+
+    <script>
+    // Category filter
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+    </script>
 </body>
 </html>
