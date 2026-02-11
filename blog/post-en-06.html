@@ -1,30 +1,93 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sleep - The Underrated Muscle Booster | GesundheitProfi</title>
+    <title>Vitality After 40 - Here's How - VitalCore</title>
+    <meta name="description" content="Vitality After 40 - Here's How - Science-based health tips from VitalCore.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-        h1 { color: #2c3e50; }
-        .meta { color: #7f8c8d; font-size: 0.9em; }
-        .content { margin-top: 30px; }
-        .content h2 { color: #27ae60; margin-top: 30px; }
-        .content ul { line-height: 2; }
-        a { color: #27ae60; }
-        .back-link { display: inline-block; margin-bottom: 20px; }
+    :root {
+        --primary: #27ae60;
+        --primary-dark: #1e8449;
+        --secondary: #1a1a2e;
+        --light: #f8f9fc;
+        --text: #2c3e50;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
+    }
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family: 'Inter', sans-serif; line-height: 1.8; color: var(--text); background: var(--light);}
+    .header {background: var(--white); padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05);}
+    .header-container {max-width: 1400px; margin: 0 auto; padding: 0 40px; display: flex; justify-content: space-between; align-items: center;}
+    .logo {font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--primary); text-decoration: none;}
+    .nav-links {display: flex; gap: 30px; list-style: none;}
+    .nav-links a {color: var(--text); text-decoration: none; font-weight: 500;}
+    .lang-select {padding: 8px 16px; border: 1px solid #ddd; border-radius: 8px; cursor: pointer;}
+    .hero {background: linear-gradient(135deg, var(--secondary) 0%, #2d3a5c 100%); color: var(--white); padding: 80px 0; text-align: center;}
+    .hero h1 {font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 15px;}
+    .article-container {max-width: 900px; margin: 0 auto; padding: 60px 40px;}
+    .intro {font-size: 1.3rem; margin-bottom: 40px; line-height: 1.9; border-left: 4px solid var(--primary); padding-left: 25px;}
+    .article-image {width: 100%; border-radius: var(--radius); margin: 30px 0; box-shadow: var(--shadow);}
+    .article-content h2 {font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--secondary); margin: 50px 0 20px;}
+    .article-content ul {margin: 20px 0 25px 25px;}
+    .article-content li {margin-bottom: 12px;}
+    .science-box {background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); border-radius: var(--radius); padding: 30px; margin: 40px 0; border-left: 4px solid var(--primary);}
+    .science-box h4 {color: var(--primary); margin-bottom: 15px;}
+    .cta-box {background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: var(--white); padding: 40px; border-radius: var(--radius); margin: 50px 0; text-align: center;}
+    .cta-btn {display: inline-block; padding: 16px 40px; background: var(--white); color: var(--primary); border-radius: 12px; text-decoration: none; font-weight: 700;}
+    .footer {background: var(--secondary); color: var(--white); padding: 50px 0; text-align: center;}
+    @media (max-width: 768px) {.header-container {flex-direction: column; gap: 20px; padding: 0 20px;} .article-container {padding: 40px 20px;}}
     </style>
 </head>
 <body>
-    <a href="blog.html" class="back-link">← Zurück zum Blog</a>
-    
-    <h1>Sleep - The Underrated Muscle Booster</h1>
-    <p class="meta">Veröffentlicht: 10.02.2026</p>
-    
-    <div class="content">
-    <p><img src="https://images.pexels.com/photos/3786077/pexels-photo-3786077.jpeg" alt="Gesundheitstipp" style="width:100%; border-radius:12px; margin:20px 0;"></p>
-    
-<p>Sleep is THE most important factor for muscle building - don't underestimate it!</p><p><h2>Why Sleep Matters</h2></p><p><li><strong>Growth hormones</strong> are released during sleep</li><br><li><strong>Muscle recovery</strong> happens primarily during sleep</li><br><li><strong>Cortisol</strong> (stress hormone) decreases with good sleep</li></p><p><h2>Optimize Your Sleep</h2></p><p><li>Plan 7-8 hours</li><br><li>Cool, dark bedroom</li><br><li>No screens 1 hour before bed</li><br><li>Consistent sleep schedule</li></p><p><h2>The Bottom Line</h2></p><p>Without good sleep, even the best training won't help much. Sleep is free - use it!</p>
-    </div>
+    <header class="header">
+        <div class="header-container">
+            <a href="../index.html" class="logo">VitalCore</a>
+            <nav><ul class="nav-links"><li><a href="../index.html">Home</a></li><li><a href="blog-en.html">Blog</a></li><li><a href="../index.html#products">Products</a></li></ul></nav>
+            <select class="lang-select" onchange="window.location.href=this.value">
+                <option value="post-en-06.html">🇺🇸 English</option>
+                <option value="post-de-06.html">🇩🇪 Deutsch</option>
+            </select>
+        </div>
+    </header>
+    <section class="hero"><div class="article-container"><h1>Vitality After 40 - Here's How</h1><p>February 3, 2026</p></div></section>
+    <article class="article-container">
+        <p class="intro">Discover everything about vitality after 40 - here's how. This comprehensive guide provides science-backed information for optimal results.</p>
+        <img src="https://images.pexels.com/photos/3772509/pexels-photo-3772509.jpeg" alt="Vitality After 40 - Here's How" class="article-image">
+        
+        <h2>KEY_POINTS</h2>
+        <ul>
+        <li>Evidence-based approach to TOPIC</li>
+        <li>Scientifically proven methods</li>
+        <li>Practical tips you can implement today</li>
+        <li>Research-backed recommendations</li>
+        </ul>
+        <h2>Why This Matters</h2>
+        <p>Understanding the science behind TOPIC helps you make informed decisions about your health and wellness journey.</p>
+        <h2>Getting Started</h2>
+        <ul>
+        <li>Start with small, manageable changes</li>
+        <li>Focus on consistency over perfection</li>
+        <li>Track your progress</li>
+        <li>Adjust based on results</li>
+        </ul>
+        <div class="science-box">
+        <h4>🧬 Scientific Research</h4>
+        <p>Multiple studies support the effectiveness of these approaches for improving overall health and well-being.</p>
+        </div>
+        <h2>Key Takeaways</h2>
+        <ul>
+        <li>✅ Implement one change at a time</li>
+        <li>✅ Be patient with results</li>
+        <li>✅ Stay consistent</li>
+        <li>✅ Consult professionals when needed</li>
+        </ul>
+        
+        <div class="cta-box"><h3>Ready to improve your health?</h3><a href="../index.html#products" class="cta-btn">View Products →</a></div>
+    </article>
+    <footer class="footer"><p><strong>VitalCore</strong> - Science-based health advice</p></footer>
 </body>
 </html>
