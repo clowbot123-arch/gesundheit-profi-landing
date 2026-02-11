@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | GesundheitProfi</title>
+    <title>Gesundheit Blog - Wissenschaftlich fundierte Gesundheitstipps | GesundheitProfi</title>
+    <meta name="description" content="Entdecken Sie wissenschaftlich fundierte Gesundheitstipps, Ernährungsratgeber und evidenzbasierte Strategien für ein gesünderes Leben.">
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
@@ -14,78 +15,985 @@
       gtag('config', 'G-ZZND0S6EPD');
     </script>
     
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
     <style>
-    .blog-index { padding: 120px 32px 60px; max-width: 1200px; margin: 0 auto; }
-    .page-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
-    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
-    .blog-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s; }
-    .blog-card:hover { transform: translateY(-4px); }
-    .blog-img { height: 200px; background-size: cover; background-position: center; }
-    .blog-info { padding: 24px; }
-    .blog-info h3 { font-size: 1.2rem; margin-bottom: 12px; }
-    .blog-info p { color: #4a4a6a; font-size: 0.95rem; margin-bottom: 16px; }
-    .blog-link { color: #dc3545; text-decoration: none; font-weight: 600; }
+    :root {
+        --primary: #dc3545;
+        --primary-dark: #b02a37;
+        --secondary: #1a1a2e;
+        --accent: #27ae60;
+        --light: #f8f9fc;
+        --text: #2c3e50;
+        --text-light: #6c757d;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
+    }
+    
+    * {margin:0;padding:0;box-sizing:border-box;}
+    
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.7;
+        color: var(--text);
+        background: var(--light);
+    }
+    
+    /* Header */
+    .header {
+        background: var(--white);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+    }
+    
+    .nav-links a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .nav-links a:hover, .nav-links a.active {
+        color: var(--primary);
+    }
+    
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, var(--secondary) 0%, #2d3a5c 100%);
+        color: var(--white);
+        padding: 100px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('images/img_01.jpg') center/cover;
+        opacity: 0.3;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    
+    .hero p {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        margin-bottom: 30px;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    /* Search */
+    .search-box {
+        max-width: 600px;
+        margin: 40px auto 0;
+        display: flex;
+        gap: 10px;
+    }
+    
+    .search-box input {
+        flex: 1;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+    }
+    
+    .search-box button {
+        padding: 16px 32px;
+        background: var(--primary);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    /* Categories */
+    .categories {
+        padding: 60px 0;
+        background: var(--white);
+    }
+    
+    .categories-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .section-header {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    
+    .section-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .section-header p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+    }
+    
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .category-card {
+        background: var(--light);
+        padding: 30px 20px;
+        border-radius: var(--radius);
+        text-align: center;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: 2px solid transparent;
+    }
+    
+    .category-card:hover, .category-card.active {
+        border-color: var(--primary);
+        transform: translateY(-5px);
+    }
+    
+    .category-card .icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .category-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
+    .category-card span {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+    
+    /* Featured Post */
+    .featured {
+        padding: 80px 0;
+        background: var(--light);
+    }
+    
+    .featured-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .featured-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 40px;
+        align-items: center;
+    }
+    
+    .featured-image {
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+    }
+    
+    .featured-image img {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+    }
+    
+    .featured-content {
+        padding: 20px;
+    }
+    
+    .featured-badge {
+        display: inline-block;
+        background: var(--primary);
+        color: white;
+        padding: 6px 16px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    
+    .featured-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    
+    .featured-content .meta {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .featured-content p {
+        color: var(--text);
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+    }
+    
+    .featured-list {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+    
+    .featured-list li {
+        padding: 10px 0;
+        padding-left: 30px;
+        position: relative;
+    }
+    
+    .featured-list li::before {
+        content: '✓';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: bold;
+    }
+    
+    .btn {
+        display: inline-block;
+        padding: 16px 36px;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s;
+    }
+    
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(220,53,69,0.3);
+    }
+    
+    /* Blog Posts Grid */
+    .posts-section {
+        padding: 80px 0;
+    }
+    
+    .posts-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .posts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        gap: 30px;
+    }
+    
+    .post-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.4s;
+    }
+    
+    .post-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .post-image {
+        height: 220px;
+        overflow: hidden;
+    }
+    
+    .post-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+    }
+    
+    .post-card:hover .post-image img {
+        transform: scale(1.05);
+    }
+    
+    .post-content {
+        padding: 25px;
+    }
+    
+    .post-category {
+        display: inline-block;
+        background: var(--light);
+        color: var(--primary);
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+    
+    .post-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        line-height: 1.4;
+    }
+    
+    .post-content h3 a {
+        color: var(--text);
+        text-decoration: none;
+    }
+    
+    .post-content p {
+        color: var(--text-light);
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+    
+    .post-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 15px;
+        border-top: 1px solid #eee;
+        font-size: 0.85rem;
+        color: var(--text-light);
+    }
+    
+    .read-more {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    /* Scientific Section */
+    .science-section {
+        background: var(--white);
+        padding: 80px 0;
+    }
+    
+    .science-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .science-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 30px;
+    }
+    
+    .science-card {
+        background: var(--light);
+        border-radius: var(--radius);
+        padding: 35px;
+        border-left: 4px solid var(--accent);
+    }
+    
+    .science-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .science-card p {
+        color: var(--text-light);
+        margin-bottom: 15px;
+    }
+    
+    .science-card .source {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        font-style: italic;
+    }
+    
+    /* Recipes Section */
+    .recipes-section {
+        background: linear-gradient(135deg, #f8f9fc 0%, #e8ecf4 100%);
+        padding: 80px 0;
+    }
+    
+    .recipes-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .recipe-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        gap: 25px;
+    }
+    
+    .recipe-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+    }
+    
+    .recipe-image {
+        height: 200px;
+    }
+    
+    .recipe-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .recipe-content {
+        padding: 25px;
+    }
+    
+    .recipe-badge {
+        display: inline-block;
+        background: var(--accent);
+        color: white;
+        padding: 4px 12px;
+        border-radius: 6px;
+        font-size: 0.75rem;
+        margin-bottom: 12px;
+    }
+    
+    .recipe-content h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+    
+    .recipe-meta {
+        display: flex;
+        gap: 15px;
+        color: var(--text-light);
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+    
+    .recipe-content p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+    
+    /* Newsletter */
+    .newsletter {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        padding: 80px 0;
+        text-align: center;
+    }
+    
+    .newsletter-container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .newsletter h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    
+    .newsletter p {
+        opacity: 0.9;
+        margin-bottom: 30px;
+    }
+    
+    .newsletter-form {
+        display: flex;
+        gap: 15px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .newsletter-form input {
+        flex: 1;
+        padding: 16px 24px;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+    }
+    
+    .newsletter-form button {
+        padding: 16px 36px;
+        background: var(--secondary);
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    
+    /* Footer */
+    .footer {
+        background: var(--secondary);
+        color: white;
+        padding: 60px 0;
+        text-align: center;
+    }
+    
+    .footer-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+    
+    .footer p {
+        opacity: 0.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1024px) {
+        .featured-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .featured-image img {
+            height: 350px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+        }
+        
+        .search-box {
+            flex-direction: column;
+        }
+        
+        .posts-grid, .recipe-grid, .science-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .newsletter-form {
+            flex-direction: column;
+        }
+    }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">GesundheitProfi</a>
-            <nav class="main-nav">
-                <a href="index.html#home">Startseite</a>
-                <a href="index.html#products">Produkte</a>
-                <a href="index.html#features">Über uns</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="index.html#products">Produkte</a></li>
+                </ul>
             </nav>
         </div>
     </header>
 
-    <section class="blog-index">
-        <h1 class="page-title">Gesundheits-Blog</h1>
-        <div class="blog-grid">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🔬 Wissenschaftlich fundiert</span>
+            <h1>Ihr Weg zu besserer Gesundheit</h1>
+            <p>Entdecken Sie evidenzbasierte Gesundheitstipps, die auf wissenschaftlicher Forschung basieren. Für ein gesünderes, energiegeladeneres Leben.</p>
+            
+            <div class="search-box">
+                <input type="text" placeholder="Suchen Sie nach Themen...">
+                <button>Suchen</button>
+            </div>
+        </div>
+    </section>
 
-            <div class="blog-card">
-                <div class="blog-img" style="background-image: url('images/img_03.jpg')"></div>
-                <div class="blog-info">
-                    <h3>Bauchmuskeln trainieren ab 40: Der komplette Guide</h3>
-                    <p>Lesen Sie mehr zu diesem Thema.</p>
-                    <a href="blog/bauchmuskeln-trainieren-ab-40.html" class="blog-link">Weiterlesen →</a>
-                </div>
+    <!-- Categories -->
+    <section class="categories">
+        <div class="categories-container">
+            <div class="section-header">
+                <h2>Themen entdecken</h2>
+                <p>Wählen Sie einen Bereich, der Sie interessiert</p>
             </div>
-            <div class="blog-card">
-                <div class="blog-img" style="background-image: url('images/img_09.jpg')"></div>
-                <div class="blog-info">
-                    <h3>Aminosäuren für Sportler: Was Sie wissen müssen</h3>
-                    <p>Lesen Sie mehr zu diesem Thema.</p>
-                    <a href="blog/aminosäuren-für-sportler.html" class="blog-link">Weiterlesen →</a>
+            
+            <div class="category-grid">
+                <div class="category-card active">
+                    <div class="icon">💪</div>
+                    <h3>Fitness & Kraft</h3>
+                    <span>12 Artikel</span>
                 </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-img" style="background-image: url('images/img_06.jpg')"></div>
-                <div class="blog-info">
-                    <h3>Männer Gesundheit 40+: So bleiben Sie vital</h3>
-                    <p>Lesen Sie mehr zu diesem Thema.</p>
-                    <a href="blog/männer-gesundheit-40.html" class="blog-link">Weiterlesen →</a>
+                <div class="category-card">
+                    <div class="icon">🥗</div>
+                    <h3>Ernährung</h3>
+                    <span>15 Artikel</span>
                 </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-img" style="background-image: url('images/img_06.jpg')"></div>
-                <div class="blog-info">
-                    <h3>Pilates für Frauen: Transformieren Sie Ihren Körper</h3>
-                    <p>Lesen Sie mehr zu diesem Thema.</p>
-                    <a href="blog/pilates-für-frauen.html" class="blog-link">Weiterlesen →</a>
+                <div class="category-card">
+                    <div class="icon">😴</div>
+                    <h3>Schlaf & Erholung</h3>
+                    <span>8 Artikel</span>
                 </div>
-            </div>
-            <div class="blog-card">
-                <div class="blog-img" style="background-image: url('images/img_08.jpg')"></div>
-                <div class="blog-info">
-                    <h3>Natürliche Energie steigern: Ohne Kaffee!</h3>
-                    <p>Lesen Sie mehr zu diesem Thema.</p>
-                    <a href="blog/natürliche-energie.html" class="blog-link">Weiterlesen →</a>
+                <div class="category-card">
+                    <div class="icon">🧘</div>
+                    <h3>Stress & Mental</h3>
+                    <span>10 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🦴</div>
+                    <h3>Gesundheit 40+</h3>
+                    <span>14 Artikel</span>
+                </div>
+                <div class="category-card">
+                    <div class="icon">🧬</div>
+                    <h3>Wissenschaft</h3>
+                    <span>6 Artikel</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Featured Post -->
+    <section class="featured">
+        <div class="featured-container">
+            <div class="featured-grid">
+                <div class="featured-image">
+                    <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Fitness Training">
+                </div>
+                <div class="featured-content">
+                    <span class="featured-badge">⭐ Featured Artikel</span>
+                    <h2>Muskeln aufbauen ab 40: Was die Wissenschaft sagt</h2>
+                    <p class="meta">Aktualisiert: 11. Februar 2026 • 8 min Lesezeit</p>
+                    
+                    <p>Mit dem richtigen Wissen und der richtigen Strategie ist Muskelaufbau auch in den 40ern, 50ern und darüber hinaus möglich und hochwirksam.</p>
+                    
+                    <ul class="featured-list">
+                        <li>✅ Progressive Belastung für optimale Ergebnisse</li>
+                        <li>✅ Optimale Proteinzufuhr (1.6-2.2g/kg)</li>
+                        <li>✅ Schlaf als unterschätzter Muskel-Booster</li>
+                        <li>✅ Erholungszeit zwischen Trainingseinheiten</li>
+                    </ul>
+                    
+                    <a href="blog/muskeln-aufbauen-ab-40.html" class="btn">Artikel lesen →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="posts-section">
+        <div class="posts-container">
+            <div class="section-header">
+                <h2>Neueste Artikel</h2>
+                <p>Aktuelle Erkenntnisse und praktische Tipps</p>
+            </div>
+            
+            <div class="posts-grid">
+                <!-- Post 1 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Natürliche Energie">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🥗 Ernährung</span>
+                        <h3><a href="blog/natürliche-energie.html">Natürliche Energie steigern: Ohne Kaffee!</a></h3>
+                        <p>Entdecken Sie wissenschaftlich fundierte Methoden, um Ihre Energie natürlich zu boosten - ohne den berüchtigten Absturz.</p>
+                        <div class="post-meta">
+                            <span>11.02.2026</span>
+                            <a href="blog/natürliche-energie.html" class="read-more">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 2 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" alt="Pilates">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">💪 Fitness</span>
+                        <h3><a href="blog/pilates-für-frauen.html">Pilates für Frauen: Transformieren Sie Ihren Körper</a></h3>
+                        <p>Warum Pilates die perfekte Trainingsmethode für Frauen jeden Alters ist - wissenschaftlich erklärt.</p>
+                        <div class="post-meta">
+                            <span>10.02.2026</span>
+                            <a href="blog/pilates-für-frauen.html" class="read-more">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 3 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3772509/pexels-photo-3772509.jpeg" alt="Männer Gesundheit">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🦴 Gesundheit 40+</span>
+                        <h3><a href="blog/männer-gesundheit-40.html">Männer Gesundheit 40+: So bleiben Sie vital</a></h3>
+                        <p>Die wichtigsten Vorsorgeuntersuchungen und Gesundheitstipps speziell für Männer über 40.</p>
+                        <div class="post-meta">
+                            <span>10.02.2026</span>
+                            <a href="blog/männer-gesundheit-40.html" class="read-more">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 4 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Aminosäuren">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🧬 Wissenschaft</span>
+                        <h3><a href="blog/aminosäuren-für-sportler.html">Aminosäuren für Sportler: Was Sie wissen müssen</a></h3>
+                        <p>Die wissenschaftliche Basis: Welche Aminosäuren wirklich wirken und wie Sie sie optimal einsetzen.</p>
+                        <div class="post-meta">
+                            <span>09.02.2026</span>
+                            <a href="blog/aminosäuren-für-sportler.html" class="read-more">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 5 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/3779595/pexels-photo-3779595.jpeg" alt="Schlaf">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">😴 Schlaf</span>
+                        <h3><a href="blog/schlaf-optimieren.html">Schlaf optimieren: Der ultimative Guide</a></h3>
+                        <p>Wissenschaftlich fundierte Strategien für besseren Schlaf und schnellere Regeneration.</p>
+                        <div class="post-meta">
+                            <span>09.02.2026</span>
+                            <a href="blog/schlaf-optimieren.html" class="read-more">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Post 6 -->
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Ernährung">
+                    </div>
+                    <div class="post-content">
+                        <span class="post-category">🥗 Rezepte</span>
+                        <h3><a href="blog/gesunde-ernährung.html">Gesunde Ernährung: Der Einsteiger-Guide</a></h3>
+                        <p>Wissenschaftlich fundierte Grundlagen für eine ausgewogene, gesunde Ernährung.</p>
+                        <div class="post-meta">
+                            <span>08.02.2026</span>
+                            <a href="blog/gesunde-ernährung.html" class="read-more">Weiterlesen →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Science Section -->
+    <section class="science-section">
+        <div class="science-container">
+            <div class="section-header">
+                <h2>🧬 Wissenschaft kompakt</h2>
+                <p>Kurz und prägnant: Die wichtigsten Erkenntnisse aus der Forschung</p>
+            </div>
+            
+            <div class="science-grid">
+                <div class="science-card">
+                    <h3>📊 Protein und Muskeln</h3>
+                    <p>Studien zeigen, dass eine Proteinzufuhr von 1.6-2.2g pro kg Körpergewicht optimal für Muskelaufbau ist - auch im Alter.</p>
+                    <p class="source">Quelle: Journal of the International Society of Sports Nutrition</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>😴 Schlaf und Hormone</h3>
+                    <p>7-9 Stunden Schlaf sind entscheidend für optimale Testosteron- und Wachstumshormonproduktion.</p>
+                    <p class="source">Quelle: Sleep Foundation Research</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>🧘 Stress und Immunsystem</h3>
+                    <p>Chronischer Stress schwächt das Immunsystem signifikant. Meditation kann Cortisol um bis zu 30% senken.</p>
+                    <p class="source">Quelle: American Psychological Association</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>💧 Hydration und Gehirn</h3>
+                    <p>Bereits 2% Flüssigkeitsmangel kann die Gehirnleistung um 10-15% beeinträchtigen.</p>
+                    <p class="source">Quelle: Journal of Nutrition</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>🏃‍♀️ Bewegung und Langlebigkeit</h3>
+                    <p>150 Minuten moderate Bewegung pro Woche können das Risiko für Herzerkrankungen um 30% senken.</p>
+                    <p class="source">Quelle: American Heart Association</p>
+                </div>
+                
+                <div class="science-card">
+                    <h3>🥑 Gesunde Fette</h3>
+                    <p>Omega-3-Fettsäuren unterstützen die Herzgesundheit und können Entzündungen reduzieren.</p>
+                    <p class="source">Quelle: Harvard Health Publishing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipes -->
+    <section class="recipes-section">
+        <div class="recipes-container">
+            <div class="section-header">
+                <h2>🥗 Gesunde Rezepte</h2>
+                <p>Wissenschaftlich fundierte Ernährung muss lecker sein</p>
+            </div>
+            
+            <div class="recipe-grid">
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Avocado Toast">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-badge">🥑 Frühstück</span>
+                        <h3>Avocado Power Toast</h3>
+                        <div class="recipe-meta">
+                            <span>⏱️ 10 min</span>
+                            <span>💪 18g Protein</span>
+                        </div>
+                        <p>Protein-reiches Frühstück mit gesunden Fetten für langanhaltende Energie.</p>
+                    </div>
+                </article>
+                
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Quinoa Bowl">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-badge">🥗 Mittagessen</span>
+                        <h3>Mediterrane Quinoa Bowl</h3>
+                        <div class="recipe-meta">
+                            <span>⏱️ 25 min</span>
+                            <span>💪 22g Protein</span>
+                        </div>
+                        <p>Pflanzliche Proteinquelle mit gesunden Fetten und frischem Gemüse.</p>
+                    </div>
+                </article>
+                
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Detox Water">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-badge">💧 Getränk</span>
+                        <h3>Zitronen-Ingwer Wasser</h3>
+                        <div class="recipe-meta">
+                            <span>⏱️ 5 min</span>
+                            <span>🔥 Stoffwechsel</span>
+                        </div>
+                        <p>Natürliche Unterstützung für den Stoffwechsel und die Verdauung.</p>
+                    </div>
+                </article>
+                
+                <article class="recipe-card">
+                    <div class="recipe-image">
+                        <img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Smoothie">
+                    </div>
+                    <div class="recipe-content">
+                        <span class="recipe-badge">🥤 Snack</span>
+                        <h3>Grüner Power Smoothie</h3>
+                        <div class="recipe-meta">
+                            <span>⏱️ 5 min</span>
+                            <span>💪 15g Protein</span>
+                        </div>
+                        <p>Vitamin-reicher Smoothie mit Spinat, Banane und Proteinpulver.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h2>💌 Bleiben Sie informiert</h2>
+            <p>Erhalten Sie wöchentliche Gesundheitstipps, neue Rezepte und exklusive Angebote.</p>
+            
+            <form class="newsletter-form">
+                <input type="email" placeholder="Ihre E-Mail-Adresse">
+                <button type="submit">Abonnieren</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p><strong>GesundheitProfi</strong> - Ihr Partner für wissenschaftlich fundierte Gesundheitstipps</p>
+            <p style="margin-top:10px;font-size:0.9rem;opacity:0.6;">Hinweis: Dieser Blog dient der Information. Bei gesundheitlichen Fragen konsultieren Sie bitte einen Arzt.</p>
+        </div>
+    </footer>
+
+    <script>
+    // Simple category filter
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('click', function() {
+            document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+
+    // Newsletter form
+    document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Vielen Dank für Ihr Abonnement!');
+    });
+    </script>
 </body>
 </html>
