@@ -55,6 +55,8 @@
     .pc li{padding:8px 0;font-size:0.9rem;}
     .pc li::before{content:"✓";color:#10b981;font-weight:bold;margin-right:8px;}
     .pr{font-size:1.6rem;font-weight:700;color:var(--p);margin:24px 0;}
+    .pr .old-price{text-decoration:line-through;color:#999;font-size:1.1rem;}
+    .pr .new-price{color:#dc3545;font-size:1.8rem;font-weight:700;}
     .pbtn{display:block;background:var(--g);color:white;padding:16px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;}
     .sf{padding:100px 0;background:white;}
     .f{background:linear-gradient(135deg,var(--t)0%,#2d2d4a100%);color:white;padding:100px 0;text-align:center;}
@@ -216,15 +218,22 @@
     const PROD = [
         {name: "MenoPower Bauch TOTAL", desc: "Das komplette Bauch-Programm für zuhause. Nur 5-10 Min/Tag!", 
          benefits: ["Starke Bauchmuskeln", "Bessere Haltung", "Weniger Rückenschmerzen"], 
-         target: "Frauen 40+", price: "25,07 EUR", 
+         target: "Frauen 40+", 
+         oldPrice: "35 EUR", 
+         price: "29 EUR", 
          link: "https://pilates4life.lpages.co/menopower-bauch-total/#aff=ClawDave", img: "images/img_01.jpg"},
         {name: "Advanced Aminosäure Komplex", desc: "Premium Aminosäuren für maximale Regeneration.", 
          benefits: ["Schnellere Regeneration", "Muskelerhalt", "Mehr Energie"], 
-         target: "Fitness-Enthusiasten", price: "108,80 EUR", 
+         target: "Fitness-Enthusiasten", 
+         oldPrice: "108,80 EUR", 
+         price: "39,95 EUR", 
          link: "https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=ClawDave", img: "images/img_02.jpg"},
         {name: "EndoPeak Vitalitäts-Formel", desc: "Die Nr. 1 Formel für männliche Vitalität.", 
          benefits: ["Natürliche Energie", "Bessere Ausdauer", "Vitalität steigern"], 
-         target: "Männer 40+", price: "159,37 EUR", 
+         target: "Männer 40+", 
+         oldPrice: "159,37 EUR", 
+         price: "69 EUR", 
+         per: "per bottle",
          link: "https://endopeak24.com/d/order-now.php#aff=ClawDave", img: "images/img_03.jpg"}
     ];
 
@@ -278,7 +287,11 @@
                     <p>${p.desc}</p>
                     <ul>${p.benefits.map(b => `<li>${b}</li>`).join("")}</ul>
                     <p style="font-size:0.9rem;color:#4a4a6a;">Target: ${p.target}</p>
-                    <p class="pr">${p.price}</p>
+                    <p class="pr">
+                        <span style="text-decoration:line-through;color:#999;font-size:1rem;margin-right:10px;">${p.oldPrice}</span>
+                        <span style="color:#dc3545;font-size:1.8rem;font-weight:700;">${p.price}</span>
+                        ${p.per ? `<span style="font-size:0.9rem;color:#666;">${p.per}</span>` : ''}
+                    </p>
                     <a href="${p.link}" target="_blank" class="pbtn">${t.cta1}</a>
                 </div>
             </div>
