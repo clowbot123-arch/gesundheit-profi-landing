@@ -3,28 +3,316 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Wie Sie Ihre Energie auf natürliche Weise boosten können.">
-    <meta name="keywords" content="Natürliche Energie">
     <title>Natürliche Energie steigern: Ohne Kaffee! | GesundheitProfi</title>
-    <link rel="stylesheet" href="../styles.css">
+    <meta name="description" content="Entdecken Sie wissenschaftlich fundierte Methoden, um Ihre Energie natürlich zu boosten - ohne den berüchtigten Absturz.">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZZND0S6EPD');
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
     <style>
-    .blog-post { max-width: 800px; margin: 0 auto; padding: 120px 32px 60px; }
-    .blog-meta { color: #7a7a9a; font-size: 0.9rem; margin-bottom: 16px; }
-    .blog-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 24px; color: #1a1a2e; }
-    .blog-excerpt { font-size: 1.2rem; color: #4a4a6a; margin-bottom: 40px; line-height: 1.7; }
-    .blog-content { line-height: 1.8; color: #4a4a6a; }
-    .blog-content h2 { font-size: 1.5rem; color: #1a1a2e; margin: 40px 0 16px; }
-    .blog-content h3 { font-size: 1.2rem; color: #1a1a2e; margin: 32px 0 12px; }
-    .blog-content p { margin-bottom: 16px; }
-    .blog-content ul, .blog-content ol { margin: 16px 0 24px 24px; }
-    .blog-content li { margin-bottom: 8px; }
-    .blog-content strong { color: #1a1a2e; }
-    .cta-box { background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); color: white; padding: 32px; border-radius: 16px; margin: 40px 0; text-align: center; }
-    .cta-box h3 { color: white; margin-bottom: 16px; }
-    .cta-box a { display: inline-block; background: white; color: #dc3545; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 16px; }
-    .related-posts { margin-top: 60px; padding-top: 40px; border-top: 1px solid #e5e7f0; }
-    .related-title { font-size: 1.5rem; margin-bottom: 24px; }
+    :root {
+        --primary: #dc3545;
+        --primary-dark: #b02a37;
+        --secondary: #1a1a2e;
+        --accent: #f39c12;
+        --light: #f8f9fc;
+        --text: #2c3e50;
+        --text-light: #6c757d;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
+    }
+    
+    * {margin:0;padding:0;box-sizing:border-box;}
+    
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.8;
+        color: var(--text);
+        background: var(--light);
+    }
+    
+    .header {
+        background: var(--white);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .main-nav {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .main-nav a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .main-nav a:hover {
+        color: var(--primary);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, var(--secondary) 0%, #2d3a5c 100%);
+        color: var(--white);
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg') center/cover;
+        opacity: 0.3;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    
+    .article-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+    
+    .intro {
+        font-size: 1.3rem;
+        color: var(--text);
+        margin-bottom: 40px;
+        line-height: 1.9;
+        border-left: 4px solid var(--accent);
+        padding-left: 25px;
+    }
+    
+    .article-image {
+        width: 100%;
+        border-radius: var(--radius);
+        margin: 30px 0;
+        box-shadow: var(--shadow);
+    }
+    
+    .article-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--secondary);
+        margin: 50px 0 20px;
+    }
+    
+    .article-content h3 {
+        font-size: 1.3rem;
+        color: var(--accent);
+        margin: 35px 0 15px;
+    }
+    
+    .article-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+    
+    .article-content ul, .article-content ol {
+        margin: 20px 0 25px 25px;
+    }
+    
+    .article-content li {
+        margin-bottom: 12px;
+    }
+    
+    .science-box {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+        border-radius: var(--radius);
+        padding: 30px;
+        margin: 40px 0;
+        border-left: 4px solid var(--accent);
+    }
+    
+    .science-box h4 {
+        color: var(--accent);
+        margin-bottom: 15px;
+    }
+    
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    
+    .data-table th {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 16px;
+        text-align: left;
+        font-weight: 600;
+    }
+    
+    .data-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .data-table tr:nth-child(even) {
+        background: var(--light);
+    }
+    
+    .cta-box {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        padding: 40px;
+        border-radius: var(--radius);
+        margin: 50px 0;
+        text-align: center;
+    }
+    
+    .cta-box h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .cta-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        background: var(--white);
+        color: var(--primary);
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+    }
+    
+    .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .related-posts {
+        margin-top: 80px;
+        padding-top: 50px;
+        border-top: 2px solid #eee;
+    }
+    
+    .related-posts h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .related-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    
+    .related-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .related-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .related-card-content {
+        padding: 20px;
+    }
+    
+    .related-card h4 {
+        color: var(--text);
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .related-card span {
+        color: var(--text-light);
+        font-size: 0.85rem;
+    }
+    
+    .footer {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 50px 0;
+        text-align: center;
+        margin-top: 80px;
+    }
+    
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .article-container {
+            padding: 40px 20px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -32,70 +320,256 @@
         <div class="header-container">
             <a href="../index.html" class="logo">GesundheitProfi</a>
             <nav class="main-nav">
-                <a href="../index.html#home">Startseite</a>
+                <a href="../index.html">Startseite</a>
                 <a href="../index.html#products">Produkte</a>
-                <a href="../index.html#features">Über uns</a>
+                <a href="blog.html">Blog</a>
             </nav>
         </div>
     </header>
 
-    <article class="blog-post">
-        <div class="blog-meta">Ratgeber • 10.02.2026</div>
-        <h1 class="blog-title">Natürliche Energie steigern: Ohne Kaffee!</h1>
-        <p class="blog-excerpt">Wie Sie Ihre Energie auf natürliche Weise boosten können.</p>
-        
-        <!-- Stock Photo from Pexels (Copyright-free) -->
-        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" 
-             alt="Natürliche Energie mit gesunder Ernährung" 
-             style="width:100%; border-radius:12px; margin-bottom:30px;">
-        
-        <div class="blog-content">
-            
-<p>Kaffee ist toll, aber es gibt auch natürliche Wege zu mehr Energie.</p>
-
-<h2>Ernährung für mehr Energie</h2>
-<ul>
-<li><strong>Komplexe Kohlenhydrate:</strong> Haferflocken, Vollkorn</li>
-<li><strong>Gesunde Fette:</strong> Avocado, Nüsse, Olivenöl</li>
-<li><strong>Proteine:</strong> Für langanhaltende Sättigung</li>
-</ul>
-
-<h2>Bewegung</h2>
-<p>Paradox, aber wahr: Bewegung gibt Energie!</p>
-<ul>
-<li>10-Minuten-Spaziergang reicht schon</li>
-<li>Dehnübungen am Morgen</li>
-<li>Regelmäßige Pausen beim Sitzen</li>
-</ul>
-
-<h2>Schlaf optimieren</h2>
-<ul>
-<li>7-8 Stunden pro Nacht</li>
-<li>Kein Handy 1 Stunde vor dem Schlafengehen</li>
-<li>Kühles, dunkles Schlafzimmer</li>
-</ul>
-
-<h2>Natürliche Supplemente</h2>
-<p>Bestimmte Vitamine und Mineralstoffe helfen:</p>
-<ul>
-<li>Vitamin B-Komplex</li>
-<li>Magnesium</li>
-<li>Eisen (bei Mangel)</li>
-</ul>
-
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">⚡ Wissenschaftlich fundiert</span>
+            <h1>Natürliche Energie steigern: Ohne Kaffee!</h1>
+            <p>Entdecken Sie evidenzbasierte Methoden für ganztägige Energie</p>
         </div>
+    </section>
+
+    <article class="article-container">
+        <p class="intro">
+            Kaffee gibt kurzfristig Energie, aber der Absturz danach kann Sie erschöpfter machen als zuvor. Die Wissenschaft zeigt: Natürliche Energiequellen sind nachhaltiger und besser für Ihren Körper.
+        </p>
+
+        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" 
+             alt="Natürliche Energie"
+             class="article-image">
+
+        <h2>☕ Das Kaffee-Problem verstehen</h2>
+        
+        <p>Kaffee enthält Koffein, das kurzfristig die Adrenalinausschüttung erhöht und Müdigkeit reduziert. Doch die Forschung zeigt:</p>
+        
+        <ul>
+            <li>Der "Crash" nach 4-6 Stunden kann schlimmer sein als die ursprüngliche Müdigkeit</li>
+            <li>Regelmäßiger Kaffeekonsum kann die Nebennieren erschöpfen</li>
+            <li>Der Körper gewöhnt sich an Koffein und braucht immer mehr</li>
+            <li>Abendkaffee kann den Schlaf stören (auch wenn Sie einschlafen)</li>
+        </ul>
+
+        <div class="science-box">
+            <h4>🧬 Koffein-Halbwertzeit</h4>
+            <p>Die Halbwertzeit von Koffein beträgt 5-6 Stunden. Das bedeutet: Wenn Sie um 14:00 Uhr eine Tasse Koffein (80mg) trinken, haben Sie um 20:00 Uhr immer noch 40mg Koffein im Blut – genug um Ihren Schlaf zu beeinträchtigen.</p>
+        </div>
+
+        <h2>🥗 Die 5 Säulen natürlicher Energie</h2>
+
+        <h3>1. Optimale Ernährung</h3>
+        
+        <p>Lebensmittel mit niedrigem glykämischen Index liefern Energie über längere Zeit:</p>
+
+        <table class="data-table">
+            <tr>
+                <th>Lebensmittel</th>
+                <th>Energie-Level</th>
+                <th>Warum</th>
+            </tr>
+            <tr>
+                <td>Haferflocken</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>Komplexe Kohlenhydrate, Ballaststoffe</td>
+            </tr>
+            <tr>
+                <td>Avocado</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>Gesunde Fette, Ballaststoffe</td>
+            </tr>
+            <tr>
+                <td>Bananen</td>
+                <td>⭐⭐⭐⭐</td>
+                <td>Natürliche Zucker, Kalium</td>
+            </tr>
+            <tr>
+                <td>Eier</td>
+                <td>⭐⭐⭐⭐⭐</td>
+                <td>Protein, gesunde Fette, Cholin</td>
+            </tr>
+            <tr>
+                <td>Nüsse</td>
+                <td>⭐⭐⭐⭐</td>
+                <td>Gesunde Fette, Protein</td>
+            </tr>
+        </table>
+
+        <h3>2. Hydration</h3>
+        
+        <p>Bereits 2% Dehydrierung kann die Gehirnleistung um 10-15% reduzieren.</p>
+
+        <div class="science-box">
+            <h4>💧 Tagesbedarf berechnen</h4>
+            <p><strong>Formel:</strong> 35ml pro kg Körpergewicht<br>
+            <strong>Beispiel (70kg):</strong> 2,5 Liter pro Tag<br>
+            <strong>Bei Sport:</strong> Zusätzlich 500ml pro Stunde Bewegung</p>
+        </div>
+
+        <h3>3. Bewegung</h3>
+        
+        <p>Paradox, aber wahr: Bewegung gibt Energie! Schon 10 Minuten Spazierengehen können:</p>
+        <ul>
+            <li>Die Durchblutung um 20% erhöhen</li>
+            <li>Endorphine freisetzen</li>
+            <li>Den Stoffwechsel ankurbeln</li>
+            <li>Die Sauerstoffversorgung des Gehirns verbessern</li>
+        </ul>
+
+        <h3>4. Schlafqualität</h3>
+        
+        <p>Die Basis aller Energie! 7-9 Stunden QUALITÄTSSCHLAF sind entscheidend.</p>
+
+        <h3>5. Atemübungen</h3>
+        
+        <p>Tiefe Atemtechniken erhöhen die Sauerstoffaufnahme sofort:</p>
+        <ol>
+            <li>4 Sekunden einatmen</li>
+            <li>4 Sekunden halten</li>
+            <li>4 Sekunden ausatmen</li>
+            <li>4 Sekunden halten</li>
+            <li>Wiederholen für 2-3 Minuten</li>
+        </ol>
+
+        <h2>🌿 Natürliche Energie-Booster</h2>
+
+        <table class="data-table">
+            <tr>
+                <th>Booster</th>
+                <th>Wirkung</th>
+                <th>Wissenschaft</th>
+            </tr>
+            <tr>
+                <td>Grüner Tee</td>
+                <td>Sanfte Energie</td>
+                <td>L-Theanine + Koffein = fokussierte Energie</td>
+            </tr>
+            <tr>
+                <td>Matcha</td>
+                <td>Antioxidantien + Energie</td>
+                <td>137x mehr EGCG als grüner Tee</td>
+            </tr>
+            <tr>
+                <td>Ingwer</td>
+                <td>Stoffwechsel-Boost</td>
+                <td>Erhöht Thermogenese um 5%</td>
+            </tr>
+            <tr>
+                <td>Apfelessig</td>
+                <td>Blutzucker-Stabilisierung</td>
+                <td>Reduziert Insulin-Spitzen</td>
+            </tr>
+            <tr>
+                <td>Sonnenlicht</td>
+                <td>Vitamin D + Serotonin</td>
+                <td>Reguliert circadianen Rhythmus</td>
+            </tr>
+        </table>
+
+        <h2>📋 Ihr 7-Tage-Energie-Plan</h2>
+
+        <table class="data-table">
+            <tr>
+                <th>Tag</th>
+                <th>Morgens</th>
+                <th>Nachmittags</th>
+                <th>Abends</th>
+            </tr>
+            <tr>
+                <td>Mo</td>
+                <td>Haferflocken + Beeren</td>
+                <td>Spaziergang 15 min</td>
+                <td>Grüner Tee (bis 16:00)</td>
+            </tr>
+            <tr>
+                <td>Di</td>
+                <td>Eier + Vollkornbrot</td>
+                <td>Ingwer-Tee</td>
+                <td>Früher ins Bett</td>
+            </tr>
+            <tr>
+                <td>Mi</td>
+                <td>Joghurt + Nüsse</td>
+                <td>10 min Stretching</td>
+                <td>Entspannungsübung</td>
+            </tr>
+            <tr>
+                <td>Do</td>
+                <td>Avocado Toast</td>
+                <td>Sonnenlicht-Pause</td>
+                <td>Kein Bildschirm 1h vor Schlaf</td>
+            </tr>
+            <tr>
+                <td>Fr</td>
+                <td>Quinoa + Ei</td>
+                <td>Walk 20 min</td>
+                <td>Magnesium</td>
+            </tr>
+            <tr>
+                <td>Sa</td>
+                <td>Protein-Smoothie</td>
+                <td>Aktivität draußen</td>
+                <td>Entspannung</td>
+            </tr>
+            <tr>
+                <td>So</td>
+                <td>Freestyle Frühstück</td>
+                <td>Ruhiger Spaziergang</td>
+                <td>Routine vorbereiten</td>
+            </tr>
+        </table>
+
+        <h2>🚫 Vermeiden Sie diese Energie-Räuber</h2>
+        <ul>
+            <li><strong>Zucker:</strong> Verursacht Energie-Spitzen und -Abstürze</li>
+            <li><strong>Verarbeitete Lebensmittel:</strong> Entziehen Energie für die Verdauung</li>
+            <li><strong>Alkohol:</strong> Stört Schlafqualität massiv</li>
+            <li><strong>Übermäßiges Koffein:</strong> Adrenalindrüsen-Erschöpfung</li>
+            <li><strong>Dehydrierung:</strong> Oft mit Durst verwechselt</li>
+            <li><strong>Stress:</strong> Cortisol raubt Energie</li>
+        </ul>
 
         <div class="cta-box">
-            <h3>💡 Profi-Tipp</h3>
-            <p>Suchen Sie nach hochwertigen Produkten für Ihre Gesundheit?</p>
-            <a href="../index.html#products">Unsere Top-Empfehlungen</a>
+            <h3>⚡ Bereit für natürliche Energie?</h3>
+            <p>Entdecken Sie hochwertige Nahrungsergänzungsmittel für natürliche Energie.</p>
+            <a href="../index.html#products" class="cta-btn">Zu den Produkten →</a>
         </div>
+
+        <section class="related-posts">
+            <h3>📚 Weitere interessante Artikel</h3>
+            <div class="related-grid">
+                <a href="bauchmuskeln-trainieren-ab-40.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Muskeln aufbauen">
+                    <div class="related-card-content">
+                        <h4>Muskeln aufbauen ab 40</h4>
+                        <span>Wissenschaftlicher Guide</span>
+                    </div>
+                </a>
+                <a href="schlaf-optimieren.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3779595/pexels-photo-3779595.jpeg" alt="Schlaf optimieren">
+                    <div class="related-card-content">
+                        <h4>Schlaf optimieren</h4>
+                        <span>Der ultimative Guide</span>
+                    </div>
+                </a>
+                <a href="aminosäuren-für-sportler.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Aminosäuren">
+                    <div class="related-card-content">
+                        <h4>Aminosäuren für Sportler</h4>
+                        <span>Wissenschaft erklärt</span>
+                    </div>
+                </a>
+            </div>
+        </section>
     </article>
 
     <footer class="footer">
-        <div class="container">
-            <p>Ihr Partner für Gesundheit</p>
-        </div>
+        <p><strong>GesundheitProfi</strong> – Ihr Partner für wissenschaftlich fundierte Gesundheitstipps</p>
+        <p style="font-size:0.85rem; margin-top:10px; opacity:0.7;">Hinweis: Dieser Blog dient der Information.</p>
     </footer>
 </body>
 </html>

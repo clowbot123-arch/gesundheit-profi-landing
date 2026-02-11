@@ -3,95 +3,743 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Erffahren Sie, wie Sie auch mit 40+ noch effektiv Bauchmuskeln aufbauen.">
-    <meta name="keywords" content="Bauchmuskeln trainieren ab 40">
-    <title>Bauchmuskeln trainieren ab 40: Der komplette Guide | GesundheitProfi</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Bauchmuskeln trainieren ab 40: Der wissenschaftliche Guide | GesundheitProfi</title>
+    <meta name="description" content="Erfahren Sie, wie Sie auch mit 40+ noch effektiv Bauchmuskeln aufbauen. Wissenschaftlich fundierte Methoden für maximale Ergebnisse.">
+    <meta name="keywords" content="Bauchmuskeln trainieren ab 40, Sixpack, Core Training, Bauchmuskeln, Fitness über 40">
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZZND0S6EPD');
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
     <style>
-    .blog-post { max-width: 800px; margin: 0 auto; padding: 120px 32px 60px; }
-    .blog-meta { color: #7a7a9a; font-size: 0.9rem; margin-bottom: 16px; }
-    .blog-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 24px; color: #1a1a2e; }
-    .blog-excerpt { font-size: 1.2rem; color: #4a4a6a; margin-bottom: 40px; line-height: 1.7; }
-    .blog-content { line-height: 1.8; color: #4a4a6a; }
-    .blog-content h2 { font-size: 1.5rem; color: #1a1a2e; margin: 40px 0 16px; }
-    .blog-content h3 { font-size: 1.2rem; color: #1a1a2e; margin: 32px 0 12px; }
-    .blog-content p { margin-bottom: 16px; }
-    .blog-content ul, .blog-content ol { margin: 16px 0 24px 24px; }
-    .blog-content li { margin-bottom: 8px; }
-    .blog-content strong { color: #1a1a2e; }
-    .cta-box { background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); color: white; padding: 32px; border-radius: 16px; margin: 40px 0; text-align: center; }
-    .cta-box h3 { color: white; margin-bottom: 16px; }
-    .cta-box a { display: inline-block; background: white; color: #dc3545; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 16px; }
-    .related-posts { margin-top: 60px; padding-top: 40px; border-top: 1px solid #e5e7f0; }
-    .related-title { font-size: 1.5rem; margin-bottom: 24px; }
+    :root {
+        --primary: #dc3545;
+        --primary-dark: #b02a37;
+        --secondary: #1a1a2e;
+        --accent: #27ae60;
+        --light: #f8f9fc;
+        --text: #2c3e50;
+        --text-light: #6c757d;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
+    }
+    
+    * {margin:0;padding:0;box-sizing:border-box;}
+    
+    body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        line-height: 1.8;
+        color: var(--text);
+        background: var(--light);
+    }
+    
+    .header {
+        background: var(--white);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .main-nav {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .main-nav a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+    
+    .main-nav a:hover {
+        color: var(--primary);
+    }
+    
+    /* Hero Section */
+    .hero {
+        background: linear-gradient(135deg, var(--secondary) 0%, #2d3a5c 100%);
+        color: var(--white);
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg') center/cover;
+        opacity: 0.3;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+    
+    .hero-meta {
+        opacity: 0.9;
+        font-size: 1.1rem;
+    }
+    
+    /* Article Content */
+    .article-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+    
+    .intro {
+        font-size: 1.3rem;
+        color: var(--text);
+        margin-bottom: 40px;
+        line-height: 1.9;
+        border-left: 4px solid var(--primary);
+        padding-left: 25px;
+    }
+    
+    .article-image {
+        width: 100%;
+        border-radius: var(--radius);
+        margin: 30px 0;
+        box-shadow: var(--shadow);
+    }
+    
+    .article-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--secondary);
+        margin: 50px 0 20px;
+    }
+    
+    .article-content h3 {
+        font-size: 1.3rem;
+        color: var(--primary);
+        margin: 35px 0 15px;
+    }
+    
+    .article-content p {
+        margin-bottom: 20px;
+        font-size: 1.05rem;
+    }
+    
+    .article-content ul, .article-content ol {
+        margin: 20px 0 25px 25px;
+    }
+    
+    .article-content li {
+        margin-bottom: 12px;
+    }
+    
+    /* Data Tables */
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    
+    .data-table th {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 16px;
+        text-align: left;
+        font-weight: 600;
+    }
+    
+    .data-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .data-table tr:nth-child(even) {
+        background: var(--light);
+    }
+    
+    /* Science Box */
+    .science-box {
+        background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+        border-radius: var(--radius);
+        padding: 30px;
+        margin: 40px 0;
+        border-left: 4px solid var(--accent);
+    }
+    
+    .science-box h4 {
+        color: var(--accent);
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .science-box p {
+        font-size: 0.95rem;
+        color: var(--text);
+    }
+    
+    /* Pro Tip Box */
+    .pro-tip {
+        background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+        border-radius: var(--radius);
+        padding: 25px;
+        margin: 35px 0;
+        border-left: 4px solid #e67e22;
+    }
+    
+    .pro-tip h4 {
+        color: #e67e22;
+        margin-bottom: 10px;
+    }
+    
+    /* CTA Box */
+    .cta-box {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        padding: 40px;
+        border-radius: var(--radius);
+        margin: 50px 0;
+        text-align: center;
+    }
+    
+    .cta-box h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        color: var(--white);
+    }
+    
+    .cta-box p {
+        margin-bottom: 25px;
+        opacity: 0.95;
+    }
+    
+    .cta-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        background: var(--white);
+        color: var(--primary);
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+        transition: all 0.3s;
+    }
+    
+    .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    /* Related Posts */
+    .related-posts {
+        margin-top: 80px;
+        padding-top: 50px;
+        border-top: 2px solid #eee;
+    }
+    
+    .related-posts h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .related-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s;
+        text-decoration: none;
+    }
+    
+    .related-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    }
+    
+    .related-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .related-card-content {
+        padding: 20px;
+    }
+    
+    .related-card h4 {
+        color: var(--text);
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+    
+    .related-card span {
+        color: var(--text-light);
+        font-size: 0.85rem;
+    }
+    
+    /* Footer */
+    .footer {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 50px 0;
+        text-align: center;
+        margin-top: 80px;
+    }
+    
+    .footer p {
+        opacity: 0.8;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            gap: 20px;
+            padding: 0 20px;
+        }
+        
+        .article-container {
+            padding: 40px 20px;
+        }
+        
+        .hero {
+            padding: 60px 0;
+        }
+    }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="../index.html" class="logo">GesundheitProfi</a>
             <nav class="main-nav">
-                <a href="../index.html#home">Startseite</a>
+                <a href="../index.html">Startseite</a>
                 <a href="../index.html#products">Produkte</a>
-                <a href="../index.html#features">Über uns</a>
+                <a href="blog.html">Blog</a>
             </nav>
         </div>
     </header>
 
-    <article class="blog-post">
-        <div class="blog-meta">
-        <!-- Stock Photo from Pexels (Copyright-free) -->
-        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" 
-             alt="Gesundheitstipp" 
-             style="width:100%; border-radius:12px; margin-bottom:30px;">
-        Ratgeber • 10.02.2026</div>
-        <h1 class="blog-title">Bauchmuskeln trainieren ab 40: Der komplette Guide</h1>
-        <p class="blog-excerpt">Erfahren Sie, wie Sie auch mit 40+ noch effektiv Bauchmuskeln aufbauen können.</p>
-        
-        <!-- Stock Photoexels ( from PCopyright-free) -->
-        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" 
-             alt="Fitness Training ab 40" 
-             style="width:100%; border-radius:12px; margin-bottom:30px;">
-        
-        <div class="blog-content">
-            
-<p>Mit zunehmendem Alter verändert sich unser Stoffwechsel. Das bedeutet aber nicht, dass Sie keine flachen Bauchmuskeln mehr erreichen können.</p>
-
-<h2>Warum ist Training ab 40 anders?</h2>
-<p>Ab dem 40. Lebensjahr sinkt der Testosteronspiegel natürlicherweise um etwa 1% pro Jahr. Das macht den Muskelaufbau etwas schwieriger, aber nicht unmöglich.</p>
-
-<h2>Die effektivsten Übungen</h2>
-<ul>
-<li><strong>Plank:</strong> Die Königsübung für den Core</li>
-<li><strong>Beinheben:</strong> Fokus auf den unteren Bauch</li>
-<li><strong>Crunches:</strong> Klassiker mit Variationen</li>
-</ul>
-
-<h2>Ernährungstipps</h2>
-<p>70% des Erfolgs liegt in der Ernährung. Achten Sie auf:</p>
-<ul>
-<li>Genug Protein (1.5-2g pro kg Körpergewicht)</li>
-<li>Weniger Zucker und verarbeitete Lebensmittel</li>
-<li>Viel Wasser trinken</li>
-</ul>
-
-<h2>Fazit</h2>
-<p>Mit dem richtigen Training und der passenden Ernährung können Sie auch ab 40 noch tolle Ergebnisse erzielen.</p>
-
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🔬 Wissenschaftlich fundiert</span>
+            <h1>Bauchmuskeln trainieren ab 40: Der komplette Guide</h1>
+            <p class="hero-meta">Updated: 11. Februar 2026 • 12 min Lesezeit</p>
         </div>
+    </section>
+
+    <!-- Article -->
+    <article class="article-container">
+        <p class="intro">
+            Der Mythos, dass Muskelaufbau nach dem 40. Lebensjahr unmöglich wird, gehört der Vergangenheit an. Die Wissenschaft zeigt eindeutig: Mit dem richtigen Ansatz ist Muskelaufbau in jedem Alter nicht nur möglich – sondern hochwirksam.
+        </p>
+
+        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" 
+             alt="Fitness Training über 40"
+             class="article-image">
+
+        <h2>📊 Was passiert mit unseren Muskeln mit dem Alter?</h2>
+        
+        <p>Der altersbedingte Muskelverlust, auch <strong>Sarkopenie</strong> genannt, beginnt viel früher als die meisten denken. Laut Forschung im <em>Journal of Cachexia, Sarcopenia and Muscle</em> beginnt der Muskelmasseverlust typischerweise nach dem 30. Lebensjahr.</p>
+
+        <table class="data-table">
+            <tr>
+                <th>Alter</th>
+                <th>Muskelmasseverlust pro Jahr</th>
+                <th>Kraftverlust pro Jahr</th>
+            </tr>
+            <tr>
+                <td>30-50 Jahre</td>
+                <td>~3-5% pro Jahrzehnt</td>
+                <td>~1-2% pro Jahrzehnt</td>
+            </tr>
+            <tr>
+                <td>50+ Jahre</td>
+                <td>~1-2% pro Jahr</td>
+                <td>~1.5-5% pro Jahr</td>
+            </tr>
+        </table>
+
+        <h3>Das Phänomen der Anabolen Resistenz</h3>
+        
+        <p>Mit zunehmendem Alter werden unsere Muskeln weniger empfindlich für muskelaufbauende Signale – Forscher nennen dies <strong>"anabole Resistenz"</strong>. Das bedeutet:</p>
+        
+        <ul>
+            <li>Die gleichen Trainings- und Ernährungsstrategien wie mit 20 müssen angepasst werden</li>
+            <li>Wir brauchen <strong>stärkere Reize</strong> durch höhere Proteinzufuhr</li>
+            <li>Mehr <strong>Erholungszeit</strong> zwischen den Trainingseinheiten</li>
+            <li>Konzentration auf <strong>progressive Belastung</strong></li>
+        </ul>
+
+        <div class="science-box">
+            <h4>🧬 Wissenschaftlicher Fakt</h4>
+            <p>Die gute Nachricht: Anabole Resistenz bedeutet NICHT, dass Muskelaufbau unmöglich ist. Studien zeigen, dass ältere Erwachsene mit dem richtigen Training und der richtigen Ernährung genauso effektiv Muskeln aufbauen können wie jüngere – sie müssen nur etwas mehr Aufwand betreiben.</p>
+        </div>
+
+        <h2>🏋️ Das wissenschaftlich optimierte Trainingsprogramm</h2>
+
+        <h3>1. Progressive Belastung: Das Fundament</h3>
+        
+        <p>Progressive Belastung – die graduell steigenden Anforderungen an Ihre Muskeln – bleibt die wissenschaftlich am besten validierte Methode für Muskelwachstum. Eine Meta-Analyse in <em>Sports Medicine</em> bestätigt, dass progressives Krafttraining die Muskelmasse in allen Altersgruppen erhöht.</p>
+
+        <table class="data-table">
+            <tr>
+                <th>Woche</th>
+                <th>Fokus</th>
+                <th>Intensität</th>
+            </tr>
+            <tr>
+                <td>1-2</td>
+                <td>Technik meistern</td>
+                <td>60-70% 1RM</td>
+            </tr>
+            <tr>
+                <td>3-4</td>
+                <td>Beginn Progression</td>
+                <td>70-75% 1RM</td>
+            </tr>
+            <tr>
+                <td>5-8</td>
+                <td>Aufbau Volumen</td>
+                <td>75-80% 1RM</td>
+            </tr>
+            <tr>
+                <td>9+</td>
+                <td>Halten & Fortschritt</td>
+                <td>80-85% 1RM</td>
+            </tr>
+        </table>
+
+        <h3>2. Optimale Trainingshäufigkeit</h3>
+        
+        <p>Forschung im <em>International Journal of Sports Physiology and Performance</em> zeigt, dass 2-3 Trainingseinheiten pro Woche pro Muskelgruppe optimal für Erwachsene über 40 sind.</p>
+
+        <h3>3. Optimale Wiederholungszahlen</h3>
+        
+        <table class="data-table">
+            <tr>
+                <th>Ziel</th>
+                <th>Wiederholungen</th>
+                <th>Sätze</th>
+            </tr>
+            <tr>
+                <td>Muskelaufbau (Hypertrophie)</td>
+                <td>8-12</td>
+                <td>3-4</td>
+            </tr>
+            <tr>
+                <td>Kraft</td>
+                <td>4-8</td>
+                <td>4-5</td>
+            </tr>
+            <tr>
+                <td>Ausdauer</td>
+                <td>15-20</td>
+                <td>2-3</td>
+            </tr>
+        </table>
+
+        <h2>🥗 Ernährungswissenschaft für den Muskelaufbau</h2>
+
+        <h3>Die Proteindosis</h3>
+        
+        <p>Die ISSN (International Society of Sports Nutrition) Position besagt, dass <strong>1.6-2.2g Protein pro kg Körpergewicht</strong> täglich optimal für den Muskelaufbau sind – unabhängig vom Alter.</p>
+
+        <div class="science-box">
+            <h4>💡 Für über 40-Jährige</h4>
+            <p>Aufgrund der anabolen Resistenz kann eine Proteinzufuhr näher an 2.2g/kg effektiver sein. Verteilen Sie das Protein auf 4-5 Mahlzeiten mit jeweils 25-40g pro Mahlzeit.</p>
+        </div>
+
+        <table class="data-table">
+            <tr>
+                <th>Körpergewicht</th>
+                <th>Minimum (1.6g/kg)</th>
+                <th>Optimal (2.2g/kg)</th>
+            </tr>
+            <tr>
+                <td>70 kg</td>
+                <td>112g Protein/Tag</td>
+                <td>154g Protein/Tag</td>
+            </tr>
+            <tr>
+                <td>80 kg</td>
+                <td>128g Protein/Tag</td>
+                <td>176g Protein/Tag</td>
+            </tr>
+            <tr>
+                <td>90 kg</td>
+                <td>144g Protein/Tag</td>
+                <td>198g Protein/Tag</td>
+            </tr>
+        </table>
+
+        <h3>Optimale Proteinquellen</h3>
+        
+        <p><strong>Tierische Quellen (komplettes Protein):</strong></p>
+        <ul>
+            <li>Eier: 6g Protein pro Ei</li>
+            <li>Hähnchenbrust: 31g pro 100g</li>
+            <li>Griechischer Joghurt: 10g pro 100g</li>
+            <li>Fettarmer Hüttenkäse: 11g pro 100g</li>
+            <li>Fisch (Lachs): 25g pro 100g</li>
+        </ul>
+
+        <p><strong>Pflanzliche Quellen:</strong></p>
+        <ul>
+            <li>Quinoa: 4.4g pro 100g (gekocht)</li>
+            <li>Tofu: 8g pro 100g</li>
+            <li>Tempeh: 19g pro 100g</li>
+            <li>Hülsenfrüchte: 15-20g pro 100g</li>
+        </ul>
+
+        <h3>Die Leucin-Schwelle</h3>
+        
+        <p>Leucin ist die Schlüsselaminosäure, die die Muskelproteinsynthese auslöst. Forschung zeigt, dass <strong>2-3g Leucin pro Mahlzeit</strong> optimal sind.</p>
+
+        <table class="data-table">
+            <tr>
+                <th>Lebensmittel</th>
+                <th>Leucin-Gehalt</th>
+            </tr>
+            <tr>
+                <td>1 Ei</td>
+                <td>0.5g</td>
+            </tr>
+            <tr>
+                <td>100g Hähnchenbrust</td>
+                <td>2.5g</td>
+            </tr>
+            <tr>
+                <td>100g Rindfleisch</td>
+                <td>2.2g</td>
+            </tr>
+            <tr>
+                <td>170g Griechischer Joghurt</td>
+                <td>0.5g</td>
+            </tr>
+        </table>
+
+        <h2>😴 Schlaf: Der unterschätzte Muskel-Booster</h2>
+
+        <p>Während des Tiefschlafs schüttet Ihr Körper <strong>Wachstumshormone (GH)</strong> in 3-5fach höheren Mengen aus als im Wachzustand. GH ist essentiell für Gewebereparatur und Muskelaufbau.</p>
+
+        <div class="science-box">
+            <h4>📊 Schlaf-Empfehlungen</h4>
+            <p><strong>Dauer:</strong> 7-9 Stunden pro Nacht<br>
+            <strong>Qualität:</strong> Tiefschlaf (Phasen 3-4) ist entscheidend<br>
+            <strong>Konsistenz:</strong> Gleiche Schlafens- und Aufstehzeiten</p>
+        </div>
+
+        <h3>Schlaf-Optimierungsstrategien</h3>
+        <ol>
+            <li><strong>Temperatur:</strong> Schlafzimmer bei 18-20°C</li>
+            <li><strong>Dunkelheit:</strong> Verdunkelungsvorhänge; kein Bildschirm 1 Stunde vor dem Schlaf</li>
+            <li><strong>Koffein:</strong> Kein Koffein nach 14:00 Uhr</li>
+            <li><strong>Magnesium:</strong> 200-400mg vor dem Schlaf können die Qualität verbessern</li>
+        </ol>
+
+        <h2>💊 Wissenschaftlich belegte Nahrungsergänzungsmittel</h2>
+
+        <h3>Kreatin-Monohydrat</h3>
+        <p>Das am besten erforschte Nahrungsergänzungsmittel für Muskeln und Kraft. Eine Meta-Analyse im <em>Journal of the International Society of Sports Medicine</em> fand, dass Kreatin die Muskelmasse in der ersten Woche um 1-2kg erhöht.</p>
+        <p><strong>Dosierung:</strong> 3-5g täglich (gleich für alle Altersgruppen)</p>
+
+        <h3>Vitamin D</h3>
+        <p>Vitamin-D-Mangel ist häufig bei Erwachsenen über 40 und ist mit geringerer Muskelkraft assoziiert. Forschung im <em>Journal of Clinical Endocrinology</em> empfiehlt, Vitamin-D-Spiegel über 30ng/mL zu halten.</p>
+
+        <h2>📋 Beispiel-Trainingsplan (Woche)</h2>
+
+        <h3>Tag 1 - Unterkörper</h3>
+        <table class="data-table">
+            <tr>
+                <th>Übung</th>
+                <th>Sätze</th>
+                <th>Wdh.</th>
+                <th>Pause</th>
+            </tr>
+            <tr>
+                <td>Kniebeugen</td>
+                <td>3</td>
+                <td>8-12</td>
+                <td>2-3 min</td>
+            </tr>
+            <tr>
+                <td>Rumänisches Kreuzheben</td>
+                <td>3</td>
+                <td>8-10</td>
+                <td>2-3 min</td>
+            </tr>
+            <tr>
+                <td>Beinpresse</td>
+                <td>3</td>
+                <td>10-12</td>
+                <td>2 min</td>
+            </tr>
+            <tr>
+                <td>Beincurl</td>
+                <td>3</td>
+                <td>12-15</td>
+                <td>1-2 min</td>
+            </tr>
+            <tr>
+                <td>Wadenheben</td>
+                <td>4</td>
+                <td>15-20</td>
+                <td>1 min</td>
+            </tr>
+            <tr>
+                <td>Plank</td>
+                <td>3</td>
+                <td>45-60 sec</td>
+                <td>1 min</td>
+            </tr>
+        </table>
+
+        <h3>Tag 2 - Oberkörper</h3>
+        <table class="data-table">
+            <tr>
+                <th>Übung</th>
+                <th>Sätze</th>
+                <th>Wdh.</th>
+                <th>Pause</th>
+            </tr>
+            <tr>
+                <td>Bankdrücken</td>
+                <td>3</td>
+                <td>8-12</td>
+                <td>2-3 min</td>
+            </tr>
+            <tr>
+                <td> Klimmzüge oder Latzug</td>
+                <td>3</td>
+                <td>8-12</td>
+                <td>2-3 min</td>
+            </tr>
+            <tr>
+                <td>Schulterdrücken</td>
+                <td>3</td>
+                <td>8-10</td>
+                <td>2 min</td>
+            </tr>
+            <tr>
+                <td>Rudern</td>
+                <td>3</td>
+                <td>10-12</td>
+                <td>2 min</td>
+            </tr>
+            <tr>
+                <td>Bizeps-Curl</td>
+                <td>3</td>
+                <td>12-15</td>
+                <td>1-2 min</td>
+            </tr>
+            <tr>
+                <td>Trizeps-Strecken</td>
+                <td>3</td>
+                <td>12-15</td>
+                <td>1-2 min</td>
+            </tr>
+        </table>
 
         <div class="cta-box">
-            <h3>💡 Profi-Tipp</h3>
-            <p>Suchen Sie nach hochwertigen Produkten für Ihre Gesundheit?</p>
-            <a href="../index.html#products">Unsere Top-Empfehlungen</a>
+            <h3>💪 Bereit für den Start?</h3>
+            <p>Entdecken Sie unsere Top-Produkte für optimalen Muskelaufbau nach 40.</p>
+            <a href="../index.html#products" class="cta-btn">Zu den Produkten →</a>
         </div>
+
+        <!-- Related Posts -->
+        <section class="related-posts">
+            <h3>📚 Weitere interessante Artikel</h3>
+            <div class="related-grid">
+                <a href="natürliche-energie.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Natürliche Energie">
+                    <div class="related-card-content">
+                        <h4>Natürliche Energie steigern</h4>
+                        <span>Ohne Kaffee!</span>
+                    </div>
+                </a>
+                <a href="aminosäuren-für-sportler.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Aminosäuren">
+                    <div class="related-card-content">
+                        <h4>Aminosäuren für Sportler</h4>
+                        <span>Wissenschaft erklärt</span>
+                    </div>
+                </a>
+                <a href="pilates-für-frauen.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" alt="Pilates">
+                    <div class="related-card-content">
+                        <h4>Pilates für Frauen</h4>
+                        <span> Körper transformieren</span>
+                    </div>
+                </a>
+            </div>
+        </section>
     </article>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>Ihr Partner für Gesundheit</p>
-        </div>
+        <p><strong>GesundheitProfi</strong> – Ihr Partner für wissenschaftlich fundierte Gesundheitstipps</p>
+        <p style="font-size:0.85rem; margin-top:10px; opacity:0.7;">Hinweis: Dieser Blog dient der Information. Bei gesundheitlichen Fragen konsultieren Sie bitte einen Arzt.</p>
     </footer>
 </body>
 </html>

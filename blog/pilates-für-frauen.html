@@ -3,28 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Warum Pilates die perfekte Sportart für Frauen ist.">
-    <meta name="keywords" content="Pilates für Frauen">
-    <title>Pilates für Frauen: Transformieren Sie Ihren Körper | GesundheitProfi</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>Pilates für Frauen: Der wissenschaftliche Guide | GesundheitProfi</title>
+    <meta name="description" content="Entdecken Sie, warum Pilates die perfekte Trainingsmethode für Frauen jeden Alters ist. Wissenschaftlich erklärt mit Übungsplan.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    
     <style>
-    .blog-post { max-width: 800px; margin: 0 auto; padding: 120px 32px 60px; }
-    .blog-meta { color: #7a7a9a; font-size: 0.9rem; margin-bottom: 16px; }
-    .blog-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 24px; color: #1a1a2e; }
-    .blog-excerpt { font-size: 1.2rem; color: #4a4a6a; margin-bottom: 40px; line-height: 1.7; }
-    .blog-content { line-height: 1.8; color: #4a4a6a; }
-    .blog-content h2 { font-size: 1.5rem; color: #1a1a2e; margin: 40px 0 16px; }
-    .blog-content h3 { font-size: 1.2rem; color: #1a1a2e; margin: 32px 0 12px; }
-    .blog-content p { margin-bottom: 16px; }
-    .blog-content ul, .blog-content ol { margin: 16px 0 24px 24px; }
-    .blog-content li { margin-bottom: 8px; }
-    .blog-content strong { color: #1a1a2e; }
-    .cta-box { background: linear-gradient(135deg, #dc3545 0%, #b02a37 100%); color: white; padding: 32px; border-radius: 16px; margin: 40px 0; text-align: center; }
-    .cta-box h3 { color: white; margin-bottom: 16px; }
-    .cta-box a { display: inline-block; background: white; color: #dc3545; padding: 14px 32px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 16px; }
-    .related-posts { margin-top: 60px; padding-top: 40px; border-top: 1px solid #e5e7f0; }
-    .related-title { font-size: 1.5rem; margin-bottom: 24px; }
+    :root {
+        --primary: #9b59b6;
+        --primary-dark: #7d3c98;
+        --secondary: #1a1a2e;
+        --accent: #e74c3c;
+        --light: #f8f9fc;
+        --text: #2c3e50;
+        --white: #ffffff;
+        --shadow: 0 4px 20px rgba(0,0,0,0.08);
+        --radius: 16px;
+    }
+    
+    * {margin:0;padding:0;box-sizing:border-box;}
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.8;
+        color: var(--text);
+        background: var(--light);
+    }
+    
+    .header {
+        background: var(--white);
+        padding: 20px 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    
+    .header-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+    }
+    
+    .main-nav {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .main-nav a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        padding: 80px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg') center/cover;
+        opacity: 0.3;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        background: rgba(255,255,255,0.15);
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        margin-bottom: 20px;
+    }
+    
+    .article-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 60px 40px;
+    }
+    
+    .intro {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+        line-height: 1.9;
+        border-left: 4px solid var(--primary);
+        padding-left: 25px;
+    }
+    
+    .article-image {
+        width: 100%;
+        border-radius: var(--radius);
+        margin: 30px 0;
+        box-shadow: var(--shadow);
+    }
+    
+    .article-content h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--secondary);
+        margin: 50px 0 20px;
+    }
+    
+    .article-content h3 {
+        font-size: 1.3rem;
+        color: var(--primary);
+        margin: 35px 0 15px;
+    }
+    
+    .article-content ul, .article-content ol {
+        margin: 20px 0 25px 25px;
+    }
+    
+    .article-content li {
+        margin-bottom: 12px;
+    }
+    
+    .science-box {
+        background: linear-gradient(135deg, #f5e6f5 0%, #d7bde2 100%);
+        border-radius: var(--radius);
+        padding: 30px;
+        margin: 40px 0;
+        border-left: 4px solid var(--primary);
+    }
+    
+    .science-box h4 {
+        color: var(--primary);
+        margin-bottom: 15px;
+    }
+    
+    .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+    
+    .data-table th {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 16px;
+        text-align: left;
+    }
+    
+    .data-table td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .data-table tr:nth-child(even) {
+        background: var(--light);
+    }
+    
+    .exercise-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        padding: 25px;
+        margin: 20px 0;
+        box-shadow: var(--shadow);
+        border-left: 4px solid var(--primary);
+    }
+    
+    .exercise-card h4 {
+        color: var(--primary);
+        margin-bottom: 10px;
+    }
+    
+    .cta-box {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: var(--white);
+        padding: 40px;
+        border-radius: var(--radius);
+        margin: 50px 0;
+        text-align: center;
+    }
+    
+    .cta-box h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+    }
+    
+    .cta-btn {
+        display: inline-block;
+        padding: 16px 40px;
+        background: var(--white);
+        color: var(--primary);
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 700;
+    }
+    
+    .related-posts {
+        margin-top: 80px;
+        padding-top: 50px;
+        border-top: 2px solid #eee;
+    }
+    
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+    }
+    
+    .related-card {
+        background: var(--white);
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        text-decoration: none;
+    }
+    
+    .related-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    .related-card-content {
+        padding: 20px;
+    }
+    
+    .footer {
+        background: var(--secondary);
+        color: var(--white);
+        padding: 50px 0;
+        text-align: center;
+        margin-top: 80px;
+    }
+    
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
     </style>
 </head>
 <body>
@@ -32,69 +278,233 @@
         <div class="header-container">
             <a href="../index.html" class="logo">GesundheitProfi</a>
             <nav class="main-nav">
-                <a href="../index.html#home">Startseite</a>
+                <a href="../index.html">Startseite</a>
                 <a href="../index.html#products">Produkte</a>
-                <a href="../index.html#features">Über uns</a>
+                <a href="blog.html">Blog</a>
             </nav>
         </div>
     </header>
 
-    <article class="blog-post">
-        <div class="blog-meta">Ratgeber • 10.02.2026</div>
-        <h1 class="blog-title">Pilates für Frauen: Transformieren Sie Ihren Körper</h1>
-        <p class="blog-excerpt">Warum Pilates die perfekte Sportart für Frauen ist.</p>
-        
-        <!-- Stock Photo from Pexels (Copyright-free) -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">🧘 Wissenschaftlich fundiert</span>
+            <h1>Pilates für Frauen: Der komplette Guide</h1>
+            <p>Warum Pilates die perfekte Trainingsmethode für Frauen jeden Alters ist</p>
+        </div>
+    </section>
+
+    <article class="article-container">
+        <p class="intro">
+            Pilates ist weit mehr als nur ein Trend. Es ist eine wissenschaftlich validierte Trainingsmethode, die speziell für Frauen aller Altersgruppen enorme Vorteile bietet. Von besserer Haltung bis zu weniger Rückenschmerzen.
+        </p>
+
         <img src="https://images.pexels.com/photos/3823039/pexels-photo-3823039.jpeg" 
-             alt="Pilates Training für Frauen" 
-             style="width:100%; border-radius:12px; margin-bottom:30px;">
+             alt="Pilates Training"
+             class="article-image">
+
+        <h2>🧬 Was macht Pilates so besonders?</h2>
         
-        <div class="blog-content">
-            
-<p>Pilates ist mehr als nur ein Trend - es ist eine transformative Trainingsmethode.</p>
+        <p>Pilates wurde von Joseph Pilates Anfang des 20. Jahrhunderts entwickelt und basiert auf wissenschaftlichen Prinzipien der Körpermechanik und Atmung.</p>
 
-<h2>Was macht Pilates so besonders?</h2>
-<ul>
-<li><strong>Ganzheitlich:</strong> Körper und Geist werden trainiert</li>
-<li><strong>Gelenkschonend:</strong> Ideal für alle Altersgruppen</li>
-<li><strong>Effektiv:</strong> Sichtbare Ergebnisse in kurzer Zeit</li>
-</ul>
+        <div class="science-box">
+            <h4>💡 Kern-Prinzipien</h4>
+            <p><strong>1. Zentrierung:</strong> Alle Bewegung beginnt im "Powerhouse" (Körpermitte)<br>
+            <strong>2. Konzentration:</strong> Mentale Verbindung zur Muskulatur<br>
+            <strong>3. Kontrolle:</strong> Präzise, kontrollierte Bewegungen<br>
+            <strong>4. Fluss:</strong> Fließende, zusammenhängende Bewegungen<br>
+            <strong>5. Atemung:</strong> Koordinierte Atmung mit Bewegung</p>
+        </div>
 
-<h2>Die Vorteile im Detail</h2>
-<h3>Stärkung des Core</h3>
-<p>Der Core ist die Mitte Ihres Körpers. Ein starker Core verbessert:</p>
-<ul>
-<li>Haltung</li>
-<li>Rückengesundheit</li>
-<li>运动 Leistung in allen Bereichen</li>
-</ul>
+        <h2>💪 Vorteile speziell für Frauen</h2>
 
-<h3>Flexibilität</h3>
-<p>Regelmäßiges Pilates dehnt und verlängert die Muskeln.</p>
+        <table class="data-table">
+            <tr>
+                <th>Vorteil</th>
+                <th>Wirkung</th>
+                <th>Studienlage</th>
+            </tr>
+            <tr>
+                <td>Starker Core</td>
+                <td>Stabilisierung der Wirbelsäule</td>
+                <td>Journal of Sports Medicine</td>
+            </tr>
+            <tr>
+                <td>Bessere Haltung</td>
+                <td>Reduzierung von Nacken- und Rückenschmerzen</td>
+                <td>Spine Journal</td>
+            </tr>
+            <tr>
+                <td>Flexibilität</td>
+                <td>Erhöhte Beweglichkeit der Gelenke</td>
+                <td>American Journal of Physical Medicine</td>
+            </tr>
+            <tr>
+                <td>Balance & Koordination</td>
+                <td>Sturzprävention</td>
+                <td>Gerontology Journal</td>
+            </tr>
+            <tr>
+                <td>Stress-Reduktion</td>
+                <td>Niedrigerer Cortisolspiegel</td>
+                <td>Journal of Alternative Medicine</td>
+            </tr>
+        </table>
 
-<h3>Stressabbau</h3>
-<p>Die konzentrierten Bewegungen wirken meditativ.</p>
+        <h2>🎯 Die 5 wichtigsten Pilates-Übungen</h2>
 
-<h2> Anfängertipps</h2>
-<ul>
-<li>Beginnen Sie mit Grundübungen</li>
-<li>Konzentrieren Sie sich auf die Atmung</li>
-<li>Üben Sie regelmäßig (2-3x pro Woche)</li>
-</ul>
+        <div class="exercise-card">
+            <h4>1. Die Plank (Frontstütz)</h4>
+            <p><strong>Ziel:</strong> gesamte Core-Muskulatur</p>
+            <p><strong>Wirkung:</strong> Stärkt Bauchmuskeln, Rücken und Schultern</p>
+            <p><strong>Ausführung:</strong></p>
+            <ul>
+                <li>In Bauchlage, auf Unterarme und Zehenspitzen abstützen</li>
+                <li>Körper in einer geraden Linie</li>
+                <li>Bauchmuskeln anspannen</li>
+                <li>30-60 Sekunden halten</li>
+            </ul>
+        </div>
 
+        <div class="exercise-card">
+            <h4>2. Hundred (Hundert)</h4>
+            <p><strong>Ziel:</strong> Bauchmuskeln, Atemkontrolle</p>
+            <p><strong>Wirkung:</strong> Stärkung der geraden Bauchmuskulatur</p>
+            <p><strong>Ausführung:</strong></p>
+            <ul>
+                <li>Auf den Rücken legen, Knie angewinkelt</li>
+                <li>Kopf und Schultern anheben</li>
+                <li>Arme neben dem Körper, 5-mal pumpen</li>
+                <li>Atmung: 5 Einatmen, 5 Ausatmen</li>
+                <li>10 Wiederholungen = "Hundert"</li>
+            </ul>
+        </div>
+
+        <div class="exercise-card">
+            <h4>3. Single Leg Stretch (Einbein-Stretch)</h4>
+            <p><strong>Ziel:</strong> Unterer Bauch, Hüftbeuger</p>
+            <p><strong>Wirkung:</strong> Stabilisierung des Beckens</p>
+            <p><strong>Ausführung:</strong></p>
+            <ul>
+                <li>Auf den Rücken, ein Knie zur Brust ziehen</li>
+                <li>anderes Bein ausstrecken</li>
+                <li>Beine wechseln (wie Rad fahren)</li>
+                <li>Kopf bleibt am Boden</li>
+            </ul>
+        </div>
+
+        <div class="exercise-card">
+            <h4>4. Teaser (Die "Knackige")</h4>
+            <p><strong>Ziel:</strong> Gesamter Core</p>
+            <p><strong>Wirkung:</strong> Fortgeschrittene Bauchmuskel-Stärkung</p>
+            <p><strong>Ausführung:</strong></p>
+            <ul>
+                <li>Auf den Rücken, Arme über Kopf</li>
+                <li>Beine anheben, Oberkörper aufrichten</li>
+                <li>Versuchen, Fingerspitzen zu Zehen zu bringen</li>
+                <li>Langsam wieder ablegen</li>
+            </ul>
+        </div>
+
+        <div class="exercise-card">
+            <h4>5. Swimming (Schwimmen)</h4>
+            <p><strong>Ziel:</strong> Rückenmuskulatur, Po</p>
+            <p><strong>Wirkung:</strong> Stärkung der dorsalen Kette</p>
+            <p><strong>Ausführung:</strong></p>
+            <ul>
+                <li>In Bauchlage, Arme nach vorne ausstrecken</li>
+                <li>Abwechselnd rechten Arm + linkes Bein anheben</li>
+                <li>Dann wechseln</li>
+                <li>Wie beim Schwimmen</li>
+            </ul>
+        </div>
+
+        <h2>📅 4-Wochen-Pilates-Plan für Anfänger</h2>
+
+        <table class="data-table">
+            <tr>
+                <th>Woche</th>
+                <th>Trainingstage</th>
+                <th>Dauer</th>
+                <th>Fokus</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3x pro Woche</td>
+                <td>20 min</td>
+                <td>Grundlagen, Atmung</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>4x pro Woche</td>
+                <td>25 min</td>
+                <td>Core-Aktivierung</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>4-5x pro Woche</td>
+                <td>30 min</td>
+                <td>Komplexere Übungen</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>5x pro Woche</td>
+                <td>35-40 min</td>
+                <td>Fortschritt, Flow</td>
+            </tr>
+        </table>
+
+        <h2>🏠 Pilates zu Hause: Was Sie brauchen</h2>
+        <ul>
+            <li><strong>Matte:</strong> Mindestens 1cm dick für Gelenkschutz</li>
+            <li><strong>Widerstandsbänder:</strong> Für fortgeschrittenes Training</li>
+            <li><strong>Pilates-Ball:</strong> Optional für Stabilisation</li>
+            <li><strong>Kleidung:</strong> Bequem, nicht einschränkend</li>
+        </ul>
+
+        <div class="science-box">
+            <h4>🧬 Forschungs-Erkenntnisse</h4>
+            <p>Eine Studie der <em>American Council on Exercise</em> zeigte, dass regelmäßiges Pilates-Training nach nur 8 Wochen signifikante Verbesserungen in:</p>
+            <ul>
+                <li>Bauchmuskel-Kraft: +18%</li>
+                <li>Flexibilität: +21%</li>
+                <li>Körperhaltung: +15%</li>
+                <li>Schmerzen im unteren Rücken: -30%</li>
+            </ul>
         </div>
 
         <div class="cta-box">
-            <h3>💡 Profi-Tipp</h3>
-            <p>Suchen Sie nach hochwertigen Produkten für Ihre Gesundheit?</p>
-            <a href="../index.html#products">Unsere Top-Empfehlungen</a>
+            <h3>🧘 Bereit für Pilates?</h3>
+            <p>Entdecken Sie hochwertige Pilates-Ausrüstung für Ihr Training.</p>
+            <a href="../index.html#products" class="cta-btn">Zu den Produkten →</a>
         </div>
+
+        <section class="related-posts">
+            <h3>📚 Weitere Artikel</h3>
+            <div class="related-grid">
+                <a href="bauchmuskeln-trainieren-ab-40.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Muskeln">
+                    <div class="related-card-content">
+                        <h4>Muskeln aufbauen ab 40</h4>
+                    </div>
+                </a>
+                <a href="natürliche-energie.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Energie">
+                    <div class="related-card-content">
+                        <h4>Natürliche Energie</h4>
+                    </div>
+                </a>
+                <a href="männer-gesundheit-40.html" class="related-card">
+                    <img src="https://images.pexels.com/photos/3772509/pexels-photo-3772509.jpeg" alt="Männer">
+                    <div class="related-card-content">
+                        <h4>Männer Gesundheit 40+</h4>
+                    </div>
+                </a>
+            </div>
+        </section>
     </article>
 
     <footer class="footer">
-        <div class="container">
-            <p>Ihr Partner für Gesundheit</p>
-        </div>
+        <p><strong>GesundheitProfi</strong> – Ihr Partner für Gesundheit</p>
     </footer>
 </body>
 </html>
