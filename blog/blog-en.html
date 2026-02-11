@@ -1,29 +1,19 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gesundheit Blog - Wissenschaftliche Gesundheitstipps | GesundheitProfi</title>
-    <meta name="description" content="Entdecken Sie wissenschaftlich fundierte Gesundheitstipps, Ernährungsratgeber und evidenzbasierte Strategien für ein gesünderes Leben.">
-    
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZZND0S6EPD');
-    </script>
+    <title>Health Blog - Scientific Health Tips | VitalCore</title>
+    <meta name="description" content="Discover science-based health tips, nutrition guides, and evidence-based strategies for a healthier life.">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     
     <style>
     :root {
-        --primary: #dc3545;
-        --primary-dark: #b02a37;
+        --primary: #27ae60;
+        --primary-dark: #1e8449;
         --secondary: #1a1a2e;
-        --accent: #27ae60;
         --light: #f8f9fc;
         --text: #2c3e50;
         --text-light: #6c757d;
@@ -35,7 +25,7 @@
     * {margin:0;padding:0;box-sizing:border-box;}
     
     body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-family: 'Inter', sans-serif;
         line-height: 1.7;
         color: var(--text);
         background: var(--light);
@@ -103,31 +93,12 @@
         color: var(--white);
         padding: 100px 0;
         text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .hero::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: url('https://images.pexels.com/photos/1546165/pexels-photo-1546165.jpeg') center/cover;
-        opacity: 0.2;
-    }
-    
-    .hero-content {
-        position: relative;
-        z-index: 1;
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 0 20px;
     }
     
     .hero h1 {
         font-family: 'Playfair Display', serif;
         font-size: clamp(2.5rem, 5vw, 4rem);
         margin-bottom: 20px;
-        line-height: 1.2;
     }
     
     .hero p {
@@ -294,10 +265,6 @@
         text-align: center;
     }
     
-    .footer p {
-        opacity: 0.8;
-    }
-    
     @media (max-width: 768px) {
         .header-container {
             flex-direction: column;
@@ -323,18 +290,18 @@
     <!-- Header -->
     <header class="header">
         <div class="header-container">
-            <a href="../index.html" class="logo">GesundheitProfi</a>
+            <a href="../index.html" class="logo">VitalCore</a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="../index.html">Startseite</a></li>
-                    <li><a href="blog.html" class="active">Blog</a></li>
-                    <li><a href="../index.html#products">Produkte</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="blog-en.html" class="active">Blog</a></li>
+                    <li><a href="../index.html#products">Products</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
                 <select onchange="window.location.href=this.value">
-                    <option value="blog.html">🇩🇪 Deutsch</option>
                     <option value="blog-en.html">🇺🇸 English</option>
+                    <option value="blog.html">🇩🇪 Deutsch</option>
                 </select>
             </div>
         </div>
@@ -342,9 +309,9 @@
 
     <!-- Hero -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>💡 Gesundheit Blog</h1>
-            <p>Wissenschaftlich fundierte Gesundheitstipps für ein besseres Leben</p>
+        <div class="container">
+            <h1>💡 Health Blog</h1>
+            <p>Science-based health tips for a better life</p>
         </div>
     </section>
 
@@ -352,40 +319,40 @@
     <section class="categories">
         <div class="categories-container">
             <div class="section-header">
-                <h2>Themen entdecken</h2>
-                <p>Wählen Sie einen Bereich, der Sie interessiert</p>
+                <h2>Explore Topics</h2>
+                <p>Choose an area that interests you</p>
             </div>
             
             <div class="category-grid">
                 <div class="category-card active">
                     <div class="icon">💪</div>
-                    <h3>Fitness & Kraft</h3>
-                    <span>12 Artikel</span>
+                    <h3>Fitness & Strength</h3>
+                    <span>12 Articles</span>
                 </div>
                 <div class="category-card">
                     <div class="icon">🥗</div>
-                    <h3>Ernährung</h3>
-                    <span>15 Artikel</span>
+                    <h3>Nutrition</h3>
+                    <span>15 Articles</span>
                 </div>
                 <div class="category-card">
                     <div class="icon">😴</div>
-                    <h3>Schlaf & Erholung</h3>
-                    <span>8 Artikel</span>
+                    <h3>Sleep & Recovery</h3>
+                    <span>8 Articles</span>
                 </div>
                 <div class="category-card">
                     <div class="icon">🧘</div>
                     <h3>Stress & Mental</h3>
-                    <span>10 Artikel</span>
+                    <span>10 Articles</span>
                 </div>
                 <div class="category-card">
                     <div class="icon">🦴</div>
-                    <h3>Gesundheit 40+</h3>
-                    <span>14 Artikel</span>
+                    <h3>Health 40+</h3>
+                    <span>14 Articles</span>
                 </div>
                 <div class="category-card">
                     <div class="icon">🧬</div>
-                    <h3>Wissenschaft</h3>
-                    <span>6 Artikel</span>
+                    <h3>Science</h3>
+                    <span>6 Articles</span>
                 </div>
             </div>
         </div>
@@ -395,23 +362,23 @@
     <section class="posts-section">
         <div class="posts-container">
             <div class="section-header">
-                <h2>Neueste Artikel</h2>
-                <p>Aktuelle Erkenntnisse und praktische Tipps</p>
+                <h2>Latest Articles</h2>
+                <p>Current insights and practical tips</p>
             </div>
             
             <div class="posts-grid">
-                <!-- Featured Post -->
+                <!-- Featured -->
                 <a href="bauchmuskeln-trainieren-ab-40.html" class="post-card">
                     <div class="post-image">
-                        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Muskeln aufbauen">
+                        <img src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" alt="Building Muscle">
                     </div>
                     <div class="post-content">
                         <span class="post-category">💪 Fitness</span>
-                        <h3>Bauchmuskeln trainieren ab 40: Der wissenschaftliche Guide</h3>
-                        <p>Mit dem richtigen Ansatz ist Muskelaufbau in jedem Alter möglich. Wissenschaftlich fundiert mit Studien.</p>
+                        <h3>Building Muscle After 40: The Complete Scientific Guide</h3>
+                        <p>With the right approach, building muscle is possible at any age. Science-backed strategies for maximum results.</p>
                         <div class="post-meta">
-                            <span>11.02.2026</span>
-                            <span class="read-more">Weiterlesen →</span>
+                            <span>February 11, 2026</span>
+                            <span class="read-more">Read More →</span>
                         </div>
                     </div>
                 </a>
@@ -419,15 +386,15 @@
                 <!-- Post 2 -->
                 <a href="natürliche-energie.html" class="post-card">
                     <div class="post-image">
-                        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Natürliche Energie">
+                        <img src="https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg" alt="Natural Energy">
                     </div>
                     <div class="post-content">
-                        <span class="post-category">⚡ Energie</span>
-                        <h3>Natürliche Energie steigern: Ohne Kaffee!</h3>
-                        <p>Entdecken Sie wissenschaftlich fundierte Methoden für ganztägige Energie ohne den berüchtigten Absturz.</p>
+                        <span class="post-category">⚡ Energy</span>
+                        <h3>Boost Your Energy Naturally: Without Coffee Crash!</h3>
+                        <p>Discover science-based methods for all-day energy without the infamous crash.</p>
                         <div class="post-meta">
-                            <span>11.02.2026</span>
-                            <span class="read-more">Weiterlesen →</span>
+                            <span>February 11, 2026</span>
+                            <span class="read-more">Read More →</span>
                         </div>
                     </div>
                 </a>
@@ -439,11 +406,11 @@
                     </div>
                     <div class="post-content">
                         <span class="post-category">🧘 Pilates</span>
-                        <h3>Pilates für Frauen: Der komplette Guide</h3>
-                        <p>Warum Pilates die perfekte Trainingsmethode für Frauen jeden Alters ist. Mit Übungsplan.</p>
+                        <h3>Pilates for Women: The Complete Guide</h3>
+                        <p>Why Pilates is the perfect training method for women of all ages. With workout plan.</p>
                         <div class="post-meta">
-                            <span>10.02.2026</span>
-                            <span class="read-more">Weiterlesen →</span>
+                            <span>February 10, 2026</span>
+                            <span class="read-more">Read More →</span>
                         </div>
                     </div>
                 </a>
@@ -451,15 +418,15 @@
                 <!-- Post 4 -->
                 <a href="männer-gesundheit-40.html" class="post-card">
                     <div class="post-image">
-                        <img src="https://images.pexels.com/photos/3772509/pexels-photo-3772509.jpeg" alt="Männer Gesundheit">
+                        <img src="https://images.pexels.com/photos/3772509/pexels-photo-3772509.jpeg" alt="Men's Health">
                     </div>
                     <div class="post-content">
-                        <span class="post-category">🦴 Gesundheit 40+</span>
-                        <h3>Männer Gesundheit 40+: So bleiben Sie vital</h3>
-                        <p>Die wichtigsten Vorsorgeuntersuchungen und Gesundheitstipps speziell für Männer.</p>
+                        <span class="post-category">🦴 Health 40+</span>
+                        <h3>Men's Health After 40: Stay Vital</h3>
+                        <p>The most important health screenings and tips specifically for men over 40.</p>
                         <div class="post-meta">
-                            <span>10.02.2026</span>
-                            <span class="read-more">Weiterlesen →</span>
+                            <span>February 10, 2026</span>
+                            <span class="read-more">Read More →</span>
                         </div>
                     </div>
                 </a>
@@ -467,31 +434,31 @@
                 <!-- Post 5 -->
                 <a href="aminosäuren-für-sportler.html" class="post-card">
                     <div class="post-image">
-                        <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Aminosäuren">
+                        <img src="https://images.pexels.com/photos/3762875/pexels-photo-3762875.jpeg" alt="Amino Acids">
                     </div>
                     <div class="post-content">
-                        <span class="post-category">🧬 Wissenschaft</span>
-                        <h3>Aminosäuren für Sportler: Was Sie wissen müssen</h3>
-                        <p>Die wissenschaftliche Basis: Welche Aminosäuren wirklich wirken.</p>
+                        <span class="post-category">🧬 Science</span>
+                        <h3>Amino Acids for Athletes: What You Need to Know</h3>
+                        <p>The scientific basis: Which amino acids really work and how to use them.</p>
                         <div class="post-meta">
-                            <span>09.02.2026</span>
-                            <span class="read-more">Weiterlesen →</span>
+                            <span>February 9, 2026</span>
+                            <span class="read-more">Read More →</span>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Post 6 -->
-                <a href="post-de-08.html" class="post-card">
+                <a href="post-en-08.html" class="post-card">
                     <div class="post-image">
-                        <img src="https://images.pexels.com/photos/3779595/pexels-photo-3779595.jpeg" alt="Schlaf">
+                        <img src="https://images.pexels.com/photos/3779595/pexels-photo-3779595.jpeg" alt="Sleep">
                     </div>
                     <div class="post-content">
-                        <span class="post-category">😴 Schlaf</span>
-                        <h3>Schlaf - Der unterschätzte Muskel-Booster</h3>
-                        <p>Warum Schlaf der wichtigste Faktor für Muskelaufbau und Erholung ist.</p>
+                        <span class="post-category">😴 Sleep</span>
+                        <h3>Sleep - The Underrated Muscle Booster</h3>
+                        <p>Why sleep is the most important factor for muscle building and recovery.</p>
                         <div class="post-meta">
-                            <span>08.02.2026</span>
-                            <span class="read-more">Weiterlesen →</span>
+                            <span>February 8, 2026</span>
+                            <span class="read-more">Read More →</span>
                         </div>
                     </div>
                 </a>
@@ -501,12 +468,11 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p><strong>GesundheitProfi</strong> – Ihr Partner für wissenschaftlich fundierte Gesundheitstipps</p>
-        <p style="font-size:0.85rem; margin-top:10px; opacity:0.7;">Hinweis: Dieser Blog dient der Information. Bei gesundheitlichen Fragen konsultieren Sie bitte einen Arzt.</p>
+        <p><strong>VitalCore</strong> - Your partner for science-based health tips</p>
+        <p style="font-size:0.85rem; margin-top:10px; opacity:0.7;">This blog is for informational purposes only.</p>
     </footer>
 
     <script>
-    // Category filter
     document.querySelectorAll('.category-card').forEach(card => {
         card.addEventListener('click', function() {
             document.querySelectorAll('.category-card').forEach(c => c.classList.remove('active'));
