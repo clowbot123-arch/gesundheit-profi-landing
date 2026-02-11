@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GesundheitProfi - Ihre Gesundheit, unsere Empfehlungen</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZZND0S6EPD');
+    </script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Play+Fair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    :root {--p:#dc3545;--g:linear-gradient(135deg,#dc3545 0%,#b02a37 100%);--t:#1a1a2e;}
+    body{font-family:'Inter',sans-serif;color:var(--t);line-height:1.6;background:#f8f9fc;}
+    .h{background:rgba(255,255,255,0.95);border-bottom:1px solid #e5e7f0;position:fixed;top:0;left:0;right:0;z-index:1000;}
+    .hc{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+    .l{font-family:'Play Fair Display',serif;font-size:1.5rem;font-weight:700;color:var(--p);text-decoration:none;}
+    .n{display:flex;gap:40px;}
+    .n a{color:#4a4a6a;text-decoration:none;font-weight:500;}
+    .n a:hover,.n a.active{color:var(--p);}
+    .ls{padding:8px 16px;border:1px solid #e5e7f0;border-radius:8px;cursor:pointer;}
+    .hero{position:relative;height:85vh;min-height:600px;display:flex;align-items:center;justify-content:center;text-align:center;color:white;overflow:hidden;}
+    .hbg{position:absolute;inset:0;background-size:cover;background-position:center 30%;}
+    .ho{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,0.85)0%,rgba(220,53,69,0.4)100%);}
+    .hcnt{position:relative;z-index:1;max-width:800px;padding:40px;}
+    .hb{display:inline-block;background:rgba(255,255,255,0.15);padding:10px 24px;border-radius:30px;font-size:0.9rem;margin-bottom:24px;}
+    .ht{font-family:'Play Fair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:20px;line-height:1.15;}
+    .hs{font-size:clamp(1rem,2vw,1.25rem);margin-bottom:40px;opacity:0.9;}
+    .hbts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .btn{padding:16px 32px;border-radius:10px;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;}
+    .btn1{background:var(--g);color:white;border:none;box-shadow:0 4px 20px rgba(220,53,69,0.4);}
+    .btn1:hover{transform:translateY(-2px);}
+    .btn2{background:white;color:var(--p);}
+    .s{padding:100px 0;background:#f8f9fc;}
+    .c{max-width:1200px;margin:0 auto;padding:0 32px;}
+    .sh{text-align:center;margin-bottom:60px;}
+    .st{font-family:'Play Fair Display',serif;font-size:2.5rem;font-weight:700;}
+    .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:32px;}
+    .pc{background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);transition:all 0.4s;}
+    .pc:hover{transform:translateY(-8px);}
+    .pi{height:260px;background-size:cover;background-position:center;}
+    .pct{padding:32px;}
+    .pt{display:inline-block;background:var(--g);color:white;padding:6px 16px;border-radius:20px;font-size:0.75rem;font-weight:600;margin-bottom:16px;}
+    .pc h3{font-size:1.4rem;font-weight:700;margin-bottom:12px;}
+    .pc p{color:#4a4a6a;font-size:0.95rem;margin-bottom:16px;}
+    .pc ul{background:#f8f9fc;padding:16px;border-radius:12px;margin-bottom:16px;list-style:none;}
+    .pc li{padding:8px 0;font-size:0.9rem;}
+    .pc li::before{content:"✓";color:#10b981;font-weight:bold;margin-right:8px;}
+    .pr{font-size:1.6rem;font-weight:700;color:var(--p);margin:24px 0;}
+    .pbtn{display:block;background:var(--g);color:white;padding:16px;border-radius:10px;text-align:center;text-decoration:none;font-weight:600;}
+    .sf{padding:100px 0;background:white;}
+    .f{background:linear-gradient(135deg,var(--t)0%,#2d2d4a100%);color:white;padding:100px 0;text-align:center;}
+    .fc{background:white;border-radius:24px;max-width:700px;margin:0 auto;padding:60px 48px;}
+    .fc h2{font-family:'Play Fair Display',serif;font-size:2rem;margin-bottom:12px;}
+    .fc p{color:#4a4a6a;margin-bottom:24px;}
+    .ff{display:flex;gap:12px;max-width:500px;margin:0 auto;}
+    .ff input{flex:1;padding:14px 20px;border:1px solid #e5e7f0;border-radius:10px;font-size:1rem;}
+    .ff button{background:var(--g);color:white;padding:14px 28px;border-radius:10px;font-weight:600;border:none;cursor:pointer;}
+    /* POPUP */
+    .po{position:fixed;inset:0;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center;z-index:9999;}
+    .po.show{display:flex;}
+    .poc{background:white;border-radius:20px;max-width:450px;width:90%;position:relative;overflow:hidden;}
+    .pocl{position:absolute;top:15px;right:15px;background:none;border:none;font-size:28px;color:#999;cursor:pointer;}
+    .poh{background:var(--g);padding:30px;text-align:center;color:white;}
+    .poh h2{font-family:'Play Fair Display',serif;font-size:1.8rem;}
+    .pob{padding:30px;text-align:center;}
+    .pob p{color:#4a4a6a;margin-bottom:20px;}
+    .po ul{list-style:none;text-align:left;margin-bottom:24px;}
+    .po li{padding:10px 0;font-weight:500;}
+    .po li::before{content:"✓";color:#10b981;margin-right:10px;}
+    .pof{display:flex;flex-direction:column;gap:12px;}
+    .pof input{padding:14px 18px;border:2px solid #e5e7f0;border-radius:10px;font-size:1rem;}
+    .pof button{background:var(--g);color:white;padding:16px;border-radius:10px;font-size:1.1rem;font-weight:600;border:none;cursor:pointer;}
+    @media (max-width:768px){.hc{flex-direction:column;height:auto;padding:16px;gap:16px;}.n{flex-wrap:wrap;justify-content:center;}.ff{flex-direction:column;}}
+    </style>
+</head>
+<body>
+    <header class="h">
+        <div class="hc">
+            <a href="#" class="l" id="siteName">GesundheitProfi</a>
+            <nav class="n">
+                <a href="#home" class="active" data-t="nav_home">Startseite</a>
+                <a href="#products" data-t="nav_products">Produkte</a>
+                <a href="#features" data-t="nav_features">Über uns</a>
+            </nav>
+            <select class="ls" id="langSel">
+                <option value="de">🇩🇪 DE</option>
+                <option value="en">🇬🇧 EN</option>
+            </select>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hbg" id="heroBg" style="background-image: url('images/img_01.jpg')"></div>
+        <div class="ho"></div>
+        <div class="hcnt">
+            <span class="hb" id="heroBadge">Experten empfohlen</span>
+            <h1 class="ht" id="heroTitle">Gesund leben mit System</h1>
+            <p class="hs" id="heroSubtitle">Wissenschaftlich fundierte Empfehlungen</p>
+            <div class="hbts">
+                <a href="#products" class="btn btn1" id="cta1">Zu den Produkten</a>
+                <a href="#features" class="btn btn2" id="cta2">Mehr erfahren</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="s">
+        <div class="c">
+            <div class="sh">
+                <h2 class="st" id="prodTitle">Unsere Top Empfehlungen</h2>
+            </div>
+            <div class="pg" id="productGrid"></div>
+        </div>
+    </section>
+
+    <section id="features" class="sf">
+        <div class="c">
+            <div class="sh">
+                <h2 class="st" id="featTitle">Warum uns vertrauen?</h2>
+            </div>
+            <div class="pg" id="featureGrid"></div>
+        </div>
+    </section>
+
+    <section class="f">
+        <div class="c">
+            <div class="fc">
+                <h2 id="newsTitle">Bleiben Sie informiert</h2>
+                <p id="newsText">Erhalten Sie exklusive Gesundheitstipps.</p>
+                <form class="ff" id="newsForm">
+                    <input type="email" id="newsEmail" data-ph="email_ph" required>
+                    <button type="submit" id="newsBtn">Abonnieren</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Popup -->
+    <div class="po" id="popup">
+        <div class="poc">
+            <button class="pocl" onclick="closePopup()">&times;</button>
+            <div class="poh">
+                <h2 id="popTitle">💌 Exklusiv für Sie!</h2>
+            </div>
+            <div class="pob">
+                <p id="popText">Erhalten Sie kostenlose Gesundheitstipps!</p>
+                <ul>
+                    <li id="popLi1">✓ Kostenlose Ratgeber</li>
+                    <li id="popLi2">✓ Exklusive Gutscheine</li>
+                    <li id="popLi3">✓ Kein Spam</li>
+                </ul>
+                <form class="pof" id="popForm">
+                    <input type="email" id="popEmail" data-ph="email_ph_pop" required>
+                    <button type="submit" id="popBtn">Ja, ich will!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background:var(--t);color:white;padding:40px 0;text-align:center;">
+        <p id="footerText">Ihr Partner für Gesundheit</p>
+    </footer>
+
+    <script>
+    // Translation data
+    const T = {
+        de: {
+            siteName: "GesundheitProfi",
+            nav_home: "Startseite", nav_products: "Produkte", nav_features: "Über uns",
+            badge: "Experten empfohlen",
+            title: "Gesund leben mit System",
+            subtitle: "Wissenschaftlich fundierte Empfehlungen",
+            cta1: "Zu den Produkten", cta2: "Mehr erfahren",
+            prodTitle: "Unsere Top Empfehlungen",
+            featTitle: "Warum uns vertrauen?",
+            feat1: "Unabhängig getestet", feat1t: "Wir empfehlen nur Produkte, die wir selbst für gut befinden.",
+            feat2: "Wissenschaftlich fundiert", feat2t: "Alle Empfehlungen basieren auf Studien.",
+            feat3: "Echte Bewertungen", feat3t: "Keine bezahlten Reviews.",
+            newsTitle: "Bleiben Sie informiert", newsText: "Erhalten Sie exklusive Gesundheitstipps.",
+            newsBtn: "Abonnieren", newsPh: "Ihre E-Mail-Adresse",
+            footer: "Ihr Partner für Gesundheit",
+            popTitle: "💌 Exklusiv für Sie!", popText: "Erhalten Sie kostenlose Gesundheitstipps!",
+            popLi1: "✓ Kostenlose Ratgeber", popLi2: "✓ Exklusive Gutscheine", popLi3: "✓ Kein Spam",
+            popBtn: "Ja, ich will!", popPh: "Ihre E-Mail-Adresse"
+        },
+        en: {
+            siteName: "HealthPro",
+            nav_home: "Home", nav_products: "Products", nav_features: "About",
+            badge: "Expert recommended",
+            title: "Healthy living made easy",
+            subtitle: "Scientifically based recommendations",
+            cta1: "View Products", cta2: "Learn more",
+            prodTitle: "Our Top Recommendations",
+            featTitle: "Why trust us?",
+            feat1: "Independently tested", feat1t: "We only recommend products we believe in.",
+            feat2: "Scientifically based", feat2t: "All recommendations are based on studies.",
+            feat3: "Real reviews", feat3t: "No paid reviews.",
+            newsTitle: "Stay informed", newsText: "Get exclusive health tips.",
+            newsBtn: "Subscribe", newsPh: "Your email address",
+            footer: "Your health partner",
+            popTitle: "💌 Exclusive for You!", popText: "Get free health tips!",
+            popLi1: "✓ Free guides", popLi2: "✓ Exclusive coupons", popLi3: "✓ No spam",
+            popBtn: "Yes, I want!", popPh: "Your email address"
+        }
+    };
+
+    // Products data
+    const PROD = [
+        {name: "MenoPower Bauch TOTAL", desc: "Das komplette Bauch-Programm für zuhause. Nur 5-10 Min/Tag!", 
+         benefits: ["Starke Bauchmuskeln", "Bessere Haltung", "Weniger Rückenschmerzen"], 
+         target: "Frauen 40+", price: "25,07 EUR", 
+         link: "https://pilates4life.lpages.co/menopower-bauch-total/#aff=ClawDave", img: "images/img_01.jpg"},
+        {name: "Advanced Aminosäure Komplex", desc: "Premium Aminosäuren für maximale Regeneration.", 
+         benefits: ["Schnellere Regeneration", "Muskelerhalt", "Mehr Energie"], 
+         target: "Fitness-Enthusiasten", price: "108,80 EUR", 
+         link: "https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=ClawDave", img: "images/img_02.jpg"},
+        {name: "EndoPeak Vitalitäts-Formel", desc: "Die Nr. 1 Formel für männliche Vitalität.", 
+         benefits: ["Natürliche Energie", "Bessere Ausdauer", "Vitalität steigern"], 
+         target: "Männer 40+", price: "159,37 EUR", 
+         link: "https://endopeak24.com/d/order-now.php#aff=ClawDave", img: "images/img_03.jpg"}
+    ];
+
+    let lang = "de";
+
+    function setLang(newLang) {
+        lang = newLang;
+        const t = T[lang];
+        
+        // Update static elements
+        document.getElementById("siteName").textContent = t.siteName;
+        document.querySelectorAll(".n a")[0].textContent = t.nav_home;
+        document.querySelectorAll(".n a")[1].textContent = t.nav_products;
+        document.querySelectorAll(".n a")[2].textContent = t.nav_features;
+        document.getElementById("heroBadge").textContent = t.badge;
+        document.getElementById("heroTitle").textContent = t.title;
+        document.getElementById("heroSubtitle").textContent = t.subtitle;
+        document.getElementById("cta1").textContent = t.cta1;
+        document.getElementById("cta2").textContent = t.cta2;
+        document.getElementById("prodTitle").textContent = t.prodTitle;
+        document.getElementById("featTitle").textContent = t.featTitle;
+        document.getElementById("newsTitle").textContent = t.newsTitle;
+        document.getElementById("newsText").textContent = t.newsText;
+        document.getElementById("newsBtn").textContent = t.newsBtn;
+        document.getElementById("newsEmail").placeholder = t.newsPh;
+        document.getElementById("footerText").textContent = t.footer;
+        document.getElementById("popTitle").textContent = t.popTitle;
+        document.getElementById("popText").textContent = t.popText;
+        document.getElementById("popLi1").textContent = t.popLi1;
+        document.getElementById("popLi2").textContent = t.popLi2;
+        document.getElementById("popLi3").textContent = t.popLi3;
+        document.getElementById("popBtn").textContent = t.popBtn;
+        document.getElementById("popEmail").placeholder = t.popPh;
+        
+        // Features
+        const fg = document.getElementById("featureGrid");
+        fg.innerHTML = `
+            <div style="text-align:center;padding:40px;background:#f8f9fc;border-radius:20px;"><h3>${t.feat1}</h3><p>${t.feat1t}</p></div>
+            <div style="text-align:center;padding:40px;background:#f8f9fc;border-radius:20px;"><h3>${t.feat2}</h3><p>${t.feat2t}</p></div>
+            <div style="text-align:center;padding:40px;background:#f8f9fc;border-radius:20px;"><h3>${t.feat3}</h3><p>${t.feat3t}</p></div>
+        `;
+        
+        // Products
+        const pg = document.getElementById("productGrid");
+        pg.innerHTML = PROD.map((p, i) => `
+            <div class="pc">
+                <div class="pi" style="background-image:url('${p.img}')"></div>
+                <div class="pct">
+                    <span class="pt">${["BUDGET", "MITTEL", "PREMIUM"][i]}</span>
+                    <h3>${p.name}</h3>
+                    <p>${p.desc}</p>
+                    <ul>${p.benefits.map(b => `<li>${b}</li>`).join("")}</ul>
+                    <p style="font-size:0.9rem;color:#4a4a6a;">Target: ${p.target}</p>
+                    <p class="pr">${p.price}</p>
+                    <a href="${p.link}" target="_blank" class="pbtn">${t.cta1}</a>
+                </div>
+            </div>
+        `).join("");
+        
+        // Update dropdown
+        document.getElementById("langSel").value = lang;
+        
+        // Save preference
+        localStorage.setItem("lang", lang);
+        document.documentElement.lang = lang;
+    }
+
+    // Initialize
+    document.getElementById("langSel").addEventListener("change", e => setLang(e.target.value));
+
+    // Auto-detect browser language
+    if (!localStorage.getItem("lang")) {
+        const bl = navigator.language || navigator.userLanguage;
+        const blang = bl.split("-")[0].toLowerCase();
+        if (["de", "en"].includes(blang)) {
+            setLang(blang);
+        } else {
+            setLang("de");
+        }
+    } else {
+        setLang(localStorage.getItem("lang"));
+    }
+
+    // Popup logic
+    function closePopup() { document.getElementById("popup").classList.remove("show"); }
+    document.getElementById("popForm").addEventListener("submit", e => {
+        e.preventDefault();
+        alert("Vielen Dank! Sie sind angemeldet.");
+        closePopup();
+    });
+
+    // Show popup after 1 second (only once)
+    setTimeout(() => {
+        if (!localStorage.getItem("popupShown")) {
+            document.getElementById("popup").classList.add("show");
+            localStorage.setItem("popupShown", "true");
+        }
+    }, 1000);
+
+    // Newsletter form
+    document.getElementById("newsForm").addEventListener("submit", e => {
+        e.preventDefault();
+        alert("Vielen Dank!");
+    });
+    </script>
+</body>
+</html>

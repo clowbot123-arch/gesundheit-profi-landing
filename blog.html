@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | GesundheitProfi</title>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZND0S6EPD"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZZND0S6EPD');
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+    .blog-index { padding: 120px 32px 60px; max-width: 1200px; margin: 0 auto; }
+    .page-title { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 40px; text-align: center; }
+    .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
+    .blog-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .blog-card:hover { transform: translateY(-4px); }
+    .blog-img { height: 200px; background-size: cover; background-position: center; }
+    .blog-info { padding: 24px; }
+    .blog-info h3 { font-size: 1.2rem; margin-bottom: 12px; }
+    .blog-info p { color: #4a4a6a; font-size: 0.95rem; margin-bottom: 16px; }
+    .blog-link { color: #dc3545; text-decoration: none; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">GesundheitProfi</a>
+            <nav class="main-nav">
+                <a href="index.html#home">Startseite</a>
+                <a href="index.html#products">Produkte</a>
+                <a href="index.html#features">Über uns</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="blog-index">
+        <h1 class="page-title">Gesundheits-Blog</h1>
+        <div class="blog-grid">
+
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('images/img_03.jpg')"></div>
+                <div class="blog-info">
+                    <h3>Bauchmuskeln trainieren ab 40: Der komplette Guide</h3>
+                    <p>Lesen Sie mehr zu diesem Thema.</p>
+                    <a href="blog/bauchmuskeln-trainieren-ab-40.html" class="blog-link">Weiterlesen →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('images/img_09.jpg')"></div>
+                <div class="blog-info">
+                    <h3>Aminosäuren für Sportler: Was Sie wissen müssen</h3>
+                    <p>Lesen Sie mehr zu diesem Thema.</p>
+                    <a href="blog/aminosäuren-für-sportler.html" class="blog-link">Weiterlesen →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('images/img_06.jpg')"></div>
+                <div class="blog-info">
+                    <h3>Männer Gesundheit 40+: So bleiben Sie vital</h3>
+                    <p>Lesen Sie mehr zu diesem Thema.</p>
+                    <a href="blog/männer-gesundheit-40.html" class="blog-link">Weiterlesen →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('images/img_06.jpg')"></div>
+                <div class="blog-info">
+                    <h3>Pilates für Frauen: Transformieren Sie Ihren Körper</h3>
+                    <p>Lesen Sie mehr zu diesem Thema.</p>
+                    <a href="blog/pilates-für-frauen.html" class="blog-link">Weiterlesen →</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img" style="background-image: url('images/img_08.jpg')"></div>
+                <div class="blog-info">
+                    <h3>Natürliche Energie steigern: Ohne Kaffee!</h3>
+                    <p>Lesen Sie mehr zu diesem Thema.</p>
+                    <a href="blog/natürliche-energie.html" class="blog-link">Weiterlesen →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

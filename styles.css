@@ -1,0 +1,65 @@
+
+:root {--primary: #dc3545;--gradient: linear-gradient(135deg, #dc3545 0%, #b02a37 100%);--text-dark: #1a1a2e;--text-medium: #4a4a6a;--text-light: #7a7a9a;--bg-light: #f8f9fc;--white: #ffffff;--font-sans: 'Inter', sans-serif;--font-serif: 'Playfair Display', serif;}
+* {margin: 0; padding: 0; box-sizing: border-box;}
+html {scroll-behavior: smooth;}
+body {font-family: var(--font-sans); color: var(--text-dark); line-height: 1.6; background: var(--bg-light);}
+.header {background: rgba(255,255,255,0.95); border-bottom: 1px solid #e5e7f0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000;}
+.header-container {max-width: 1280px; margin: 0 auto; padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 72px;}
+.logo {font-family: var(--font-serif); font-size: 1.5rem; font-weight: 700; color: var(--primary); text-decoration: none;}
+.main-nav {display: flex; gap: 40px;}
+.nav-link {color: var(--text-medium); text-decoration: none; font-weight: 500; transition: color 0.2s;}
+.nav-link:hover, .nav-link.active {color: var(--primary);}
+.lang-switcher {padding: 8px 16px; border: 1px solid #e5e7f0; border-radius: 8px; font-size: 0.9rem; cursor: pointer;}
+.hero {position: relative; height: 85vh; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; color: white; overflow: hidden;}
+.hero-bg {position: absolute; inset: 0; background-size: cover; background-position: center 30%;}
+.hero-overlay {position: absolute; inset: 0; background: linear-gradient(135deg, rgba(26,26,46,0.85) 0%, rgba(220,53,69,0.4) 100%);}
+.hero-content {position: relative; z-index: 1; max-width: 800px; padding: 40px;}
+.hero-badge {display: inline-block; background: rgba(255,255,255,0.15); padding: 10px 24px; border-radius: 30px; font-size: 0.9rem; margin-bottom: 24px;}
+.hero-title {font-family: var(--font-serif); font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; margin-bottom: 20px; line-height: 1.15;}
+.hero-subtitle {font-size: clamp(1rem, 2vw, 1.25rem); margin-bottom: 40px; opacity: 0.9;}
+.hero-buttons {display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;}
+.btn-primary, .btn-secondary {padding: 16px 32px; border-radius: 10px; font-weight: 600; text-decoration: none; transition: all 0.3s; cursor: pointer;}
+.btn-primary {background: var(--gradient); color: white; border: none; box-shadow: 0 4px 20px rgba(220,53,69,0.4);}
+.btn-primary:hover {transform: translateY(-2px);}
+.btn-secondary {background: white; color: var(--primary);}
+.products {padding: 100px 0; background: var(--bg-light);}
+.container {max-width: 1200px; margin: 0 auto; padding: 0 32px;}
+.section-header {text-align: center; margin-bottom: 60px;}
+.section-title {font-family: var(--font-serif); font-size: 2.5rem; font-weight: 700; margin-bottom: 12px;}
+.section-subtitle {color: var(--text-medium); font-size: 1.1rem;}
+.product-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 32px;}
+.product-card {background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); transition: all 0.4s;}
+.product-card:hover {transform: translateY(-8px);}
+.product-image {height: 260px; background-size: cover; background-position: center;}
+.product-content {padding: 32px;}
+.product-tag {display: inline-block; background: var(--gradient); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-bottom: 16px;}
+.product-content h3 {font-size: 1.4rem; font-weight: 700; margin-bottom: 12px;}
+.short-desc {color: var(--primary); font-weight: 500; margin-bottom: 16px;}
+.full-desc {color: var(--text-medium); font-size: 0.95rem; margin-bottom: 20px; line-height: 1.7;}
+.benefits-section, .target-section {background: var(--bg-light); padding: 20px; border-radius: 12px; margin-bottom: 16px;}
+.benefits-section h4, .target-section h4 {font-size: 0.85rem; font-weight: 600; text-transform: uppercase; color: var(--text-light); margin-bottom: 12px;}
+.benefits-section ul {list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;}
+.benefits-section li {font-size: 0.9rem; color: var(--text-dark); padding-left: 20px; position: relative;}
+.benefits-section li::before {content: "✓"; position: absolute; left: 0; color: #10b981; font-weight: bold;}
+.target-section p {color: var(--text-medium); font-size: 0.9rem;}
+.price-section {margin: 24px 0;}
+.price {font-size: 1.6rem; font-weight: 700; color: var(--primary);}
+.btn-product {display: block; background: var(--gradient); color: white; padding: 16px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: 600; transition: all 0.3s;}
+.btn-product:hover {transform: translateY(-2px);}
+.features {padding: 100px 0; background: white;}
+.features-grid {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; max-width: 1000px; margin: 0 auto;}
+.feature-card {text-align: center; padding: 40px 32px; background: var(--bg-light); border-radius: 20px;}
+.feature-icon {margin-bottom: 20px;}
+.feature-card h3 {font-size: 1.25rem; margin-bottom: 12px;}
+.feature-card p {color: var(--text-medium);}
+.newsletter {padding: 100px 0; background: linear-gradient(135deg, var(--text-dark) 0%, #2d2d4a 100%);}
+.newsletter-card {background: white; border-radius: 24px; max-width: 700px; margin: 0 auto;}
+.newsletter-content {padding: 60px 48px; text-align: center;}
+.newsletter-content h2 {font-family: var(--font-serif); font-size: 2rem; margin-bottom: 12px;}
+.newsletter-content p {color: var(--text-medium); margin-bottom: 24px;}
+.newsletter-form {display: flex; gap: 12px; max-width: 500px; margin: 0 auto;}
+.newsletter-input {flex: 1; padding: 14px 20px; border: 1px solid #e5e7f0; border-radius: 10px; font-size: 1rem;}
+.btn-newsletter {background: var(--gradient); color: white; padding: 14px 28px; border-radius: 10px; font-weight: 600; border: none; cursor: pointer;}
+.footer {background: var(--text-dark); color: white; padding: 40px 0; text-align: center;}
+.disclosure {font-size: 0.8rem; opacity: 0.6; margin-top: 8px;}
+@media (max-width: 768px) {.header-container {flex-direction: column; height: auto; padding: 16px; gap: 16px;} .main-nav {flex-wrap: wrap; justify-content: center;} .hero-title {font-size: 2.2rem;} .hero-buttons {flex-direction: column;} .benefits-section ul {grid-template-columns: 1fr;} .newsletter-content {padding: 40px 24px;} .newsletter-form {flex-direction: column;}}
