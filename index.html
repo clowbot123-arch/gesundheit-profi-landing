@@ -214,8 +214,8 @@
         }
     };
 
-    // Products data
-    const PROD = [
+    // Products data - German
+    const PROD_DE = [
         {name: "MenoPower Bauch TOTAL", desc: "Das komplette Bauch-Programm für zuhause. Nur 5-10 Min/Tag!", 
          benefits: ["Starke Bauchmuskeln", "Bessere Haltung", "Weniger Rückenschmerzen"], 
          target: "Frauen 40+", 
@@ -233,6 +233,29 @@
          target: "Männer 40+", 
          oldPrice: "159,37 EUR", 
          price: "69 EUR", 
+         per: "pro Flasche",
+         link: "https://endopeak24.com/d/order-now.php#aff=ClawDave", img: "images/img_03.jpg"}
+    ];
+
+    // Products data - English
+    const PROD_EN = [
+        {name: "MenoPower Abs TOTAL", desc: "The complete home ab program. Only 5-10 min/day!", 
+         benefits: ["Strong abs", "Better posture", "Less back pain"], 
+         target: "Women 40+", 
+         oldPrice: "€35", 
+         price: "€29", 
+         link: "https://pilates4life.lpages.co/menopower-bauch-total/#aff=ClawDave", img: "images/img_01.jpg"},
+        {name: "Advanced Amino Acid Complex", desc: "Premium amino acids for maximum regeneration.", 
+         benefits: ["Faster recovery", "Muscle preservation", "More energy"], 
+         target: "Fitness enthusiasts", 
+         oldPrice: "€108.80", 
+         price: "€39.95", 
+         link: "https://www.advancedbionutritionals.com/DS24/Advanced-Amino/Muscle-Mass-Loss/HD.htm#aff=ClawDave", img: "images/img_02.jpg"},
+        {name: "EndoPeak Vitality Formula", desc: "The #1 formula for male vitality.", 
+         benefits: ["Natural energy", "Better endurance", "Increased vitality"], 
+         target: "Men 40+", 
+         oldPrice: "€159.37", 
+         price: "€69", 
          per: "per bottle",
          link: "https://endopeak24.com/d/order-now.php#aff=ClawDave", img: "images/img_03.jpg"}
     ];
@@ -278,21 +301,26 @@
         
         // Products
         const pg = document.getElementById("productGrid");
+        const PROD = lang === "de" ? PROD_DE : PROD_EN;
+        const LABELS = lang === "de" 
+            ? { budget: "BUDGET", mittel: "MITTEL", premium: "PREMIUM", target: "Zielgruppe:", view: "Zu den Produkten" }
+            : { budget: "BUDGET", mittel: "MID-RANGE", premium: "PREMIUM", target: "Target:", view: "View Products" };
+        
         pg.innerHTML = PROD.map((p, i) => `
             <div class="pc">
                 <div class="pi" style="background-image:url('${p.img}')"></div>
                 <div class="pct">
-                    <span class="pt">${["BUDGET", "MITTEL", "PREMIUM"][i]}</span>
+                    <span class="pt">${[LABELS.budget, LABELS.mittel, LABELS.premium][i]}</span>
                     <h3>${p.name}</h3>
                     <p>${p.desc}</p>
                     <ul>${p.benefits.map(b => `<li>${b}</li>`).join("")}</ul>
-                    <p style="font-size:0.9rem;color:#4a4a6a;">Target: ${p.target}</p>
+                    <p style="font-size:0.9rem;color:#4a4a6a;">${LABELS.target} ${p.target}</p>
                     <p class="pr">
                         <span style="text-decoration:line-through;color:#999;font-size:1rem;margin-right:10px;">${p.oldPrice}</span>
                         <span style="color:#dc3545;font-size:1.8rem;font-weight:700;">${p.price}</span>
-                        ${p.per ? `<span style="font-size:0.9rem;color:#666;">${p.per}</span>` : ''}
+                        ${p.per ? `<span style="font-size:0.9rem;color:#666;margin-left:5px;">${p.per}</span>` : ''}
                     </p>
-                    <a href="${p.link}" target="_blank" class="pbtn">${t.cta1}</a>
+                    <a href="${p.link}" target="_blank" class="pbtn">${LABELS.view}</a>
                 </div>
             </div>
         `).join("");
