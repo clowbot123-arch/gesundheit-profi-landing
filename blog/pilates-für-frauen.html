@@ -67,6 +67,14 @@
         text-decoration: none;
         font-weight: 500;
     }
+
+    .lang-select {
+        padding: 8px 14px;
+        border: 1px solid #dfe3ee;
+        border-radius: 8px;
+        background: #fff;
+        cursor: pointer;
+    }
     
     .hero {
         background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
@@ -282,6 +290,10 @@
                 <a href="../index.html#products">Produkte</a>
                 <a href="blog.html">Blog</a>
             </nav>
+            <select class="lang-select" onchange="window.location.href=this.value">
+                <option value="pilates-für-frauen.html">Deutsch</option>
+                <option value="pilates-for-women.html">English</option>
+            </select>
         </div>
     </header>
 

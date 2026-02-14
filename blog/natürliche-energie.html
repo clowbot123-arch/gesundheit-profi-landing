@@ -82,6 +82,14 @@
     .main-nav a:hover {
         color: var(--primary);
     }
+
+    .lang-select {
+        padding: 8px 14px;
+        border: 1px solid #dfe3ee;
+        border-radius: 8px;
+        background: #fff;
+        cursor: pointer;
+    }
     
     .hero {
         background: linear-gradient(135deg, var(--secondary) 0%, #2d3a5c 100%);
@@ -324,6 +332,10 @@
                 <a href="../index.html#products">Produkte</a>
                 <a href="blog.html">Blog</a>
             </nav>
+            <select class="lang-select" onchange="window.location.href=this.value">
+                <option value="natürliche-energie.html">Deutsch</option>
+                <option value="natural-energy.html">English</option>
+            </select>
         </div>
     </header>
 
