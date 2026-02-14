@@ -22,7 +22,7 @@
     body{font-family:'Inter',sans-serif;color:var(--t);line-height:1.6;background:#f8f9fc;}
     .h{background:rgba(255,255,255,0.95);border-bottom:1px solid #e5e7f0;position:fixed;top:0;left:0;right:0;z-index:1000;}
     .hc{max-width:1280px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:72px;}
-    .l{font-family:'Play Fair Display',serif;font-size:1.5rem;font-weight:700;color:var(--p);text-decoration:none;}
+    .l{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;color:var(--p);text-decoration:none;}
     .n{display:flex;gap:40px;}
     .n a{color:#4a4a6a;text-decoration:none;font-weight:500;}
     .n a:hover,.n a.active{color:var(--p);}
@@ -32,7 +32,7 @@
     .ho{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,26,46,0.85)0%,rgba(220,53,69,0.4)100%);}
     .hcnt{position:relative;z-index:1;max-width:800px;padding:40px;}
     .hb{display:inline-block;background:rgba(255,255,255,0.15);padding:10px 24px;border-radius:30px;font-size:0.9rem;margin-bottom:24px;}
-    .ht{font-family:'Play Fair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:20px;line-height:1.15;}
+    .ht{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:700;margin-bottom:20px;line-height:1.15;}
     .hs{font-size:clamp(1rem,2vw,1.25rem);margin-bottom:40px;opacity:0.9;}
     .hbts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
     .btn{padding:16px 32px;border-radius:10px;font-weight:600;text-decoration:none;transition:all 0.3s;cursor:pointer;}
@@ -42,7 +42,7 @@
     .s{padding:100px 0;background:#f8f9fc;}
     .c{max-width:1200px;margin:0 auto;padding:0 32px;}
     .sh{text-align:center;margin-bottom:60px;}
-    .st{font-family:'Play Fair Display',serif;font-size:2.5rem;font-weight:700;}
+    .st{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:700;}
     .pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:32px;}
     .pc{background:white;border-radius:20px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);transition:all 0.4s;}
     .pc:hover{transform:translateY(-8px);}
@@ -61,18 +61,31 @@
     .sf{padding:100px 0;background:white;}
     .f{background:linear-gradient(135deg,var(--t)0%,#2d2d4a100%);color:white;padding:100px 0;text-align:center;}
     .fc{background:white;border-radius:24px;max-width:700px;margin:0 auto;padding:60px 48px;}
-    .fc h2{font-family:'Play Fair Display',serif;font-size:2rem;margin-bottom:12px;}
+    .fc h2{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:12px;}
     .fc p{color:#4a4a6a;margin-bottom:24px;}
     .ff{display:flex;gap:12px;max-width:500px;margin:0 auto;}
     .ff input{flex:1;padding:14px 20px;border:1px solid #e5e7f0;border-radius:10px;font-size:1rem;}
     .ff button{background:var(--g);color:white;padding:14px 28px;border-radius:10px;font-weight:600;border:none;cursor:pointer;}
+    .trust{background:#fff;padding:56px 0;border-top:1px solid #eceef7;border-bottom:1px solid #eceef7;}
+    .trust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+    .trust-item{background:#f8f9fc;border:1px solid #edf0fa;border-radius:14px;padding:18px;font-size:0.95rem;color:#3f4664;text-align:center;}
+    .steps{padding:90px 0;background:#fff;}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+    .step{background:#f8f9fc;border-radius:18px;padding:24px;border:1px solid #eceff8;}
+    .step .num{display:inline-flex;width:34px;height:34px;border-radius:999px;background:var(--g);color:#fff;align-items:center;justify-content:center;font-weight:700;margin-bottom:12px;}
+    .faq{padding:90px 0;background:#f8f9fc;}
+    .faq-item{background:#fff;border:1px solid #e8ebf5;border-radius:14px;padding:18px 20px;margin-bottom:12px;}
+    .faq-item summary{cursor:pointer;font-weight:600;}
+    .faq-item p{margin-top:10px;color:#525a7a;}
+    .disclosure{padding:40px 0;background:#fff8e1;border-top:1px solid #f3e5ab;}
+    .disclosure p{font-size:0.92rem;color:#665c2a;}
     /* POPUP */
     .po{position:fixed;inset:0;background:rgba(0,0,0,0.7);display:none;align-items:center;justify-content:center;z-index:9999;}
     .po.show{display:flex;}
     .poc{background:white;border-radius:20px;max-width:450px;width:90%;position:relative;overflow:hidden;}
     .pocl{position:absolute;top:15px;right:15px;background:none;border:none;font-size:28px;color:#999;cursor:pointer;}
     .poh{background:var(--g);padding:30px;text-align:center;color:white;}
-    .poh h2{font-family:'Play Fair Display',serif;font-size:1.8rem;}
+    .poh h2{font-family:'Playfair Display',serif;font-size:1.8rem;}
     .pob{padding:30px;text-align:center;}
     .pob p{color:#4a4a6a;margin-bottom:20px;}
     .po ul{list-style:none;text-align:left;margin-bottom:24px;}
@@ -92,6 +105,7 @@
                 <a href="#home" class="active" data-t="nav_home">Startseite</a>
                 <a href="#products" data-t="nav_products">Produkte</a>
                 <a href="#features" data-t="nav_features">Über uns</a>
+                <a href="blog/blog.html" data-t="nav_blog">Blog</a>
             </nav>
             <select class="ls" id="langSel">
                 <option value="de">🇩🇪 DE</option>
@@ -132,6 +146,26 @@
         </div>
     </section>
 
+    <section class="trust">
+        <div class="c">
+            <div class="trust-grid" id="trustGrid"></div>
+        </div>
+    </section>
+
+    <section class="steps" id="how">
+        <div class="c">
+            <div class="sh"><h2 class="st" id="stepsTitle">So funktioniert es</h2></div>
+            <div class="steps-grid" id="stepsGrid"></div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="c">
+            <div class="sh"><h2 class="st" id="faqTitle">Häufige Fragen</h2></div>
+            <div id="faqList"></div>
+        </div>
+    </section>
+
     <section class="f">
         <div class="c">
             <div class="fc">
@@ -142,6 +176,12 @@
                     <button type="submit" id="newsBtn">Abonnieren</button>
                 </form>
             </div>
+        </div>
+    </section>
+
+    <section class="disclosure">
+        <div class="c">
+            <p id="discText">Transparenz-Hinweis: Einige Links auf dieser Seite sind Affiliate-Links. Wenn Sie über diese Links kaufen, erhalten wir ggf. eine Provision. Für Sie entstehen keine zusätzlichen Kosten.</p>
         </div>
     </section>
 
@@ -176,7 +216,7 @@
     const T = {
         de: {
             siteName: "GesundheitProfi",
-            nav_home: "Startseite", nav_products: "Produkte", nav_features: "Über uns",
+            nav_home: "Startseite", nav_products: "Produkte", nav_features: "Über uns", nav_blog: "Blog",
             badge: "Experten empfohlen",
             title: "Gesund leben mit System",
             subtitle: "Wissenschaftlich fundierte Empfehlungen",
@@ -191,11 +231,13 @@
             footer: "Ihr Partner für Gesundheit",
             popTitle: "💌 Exklusiv für Sie!", popText: "Erhalten Sie kostenlose Gesundheitstipps!",
             popLi1: "✓ Kostenlose Ratgeber", popLi2: "✓ Exklusive Gutscheine", popLi3: "✓ Kein Spam",
-            popBtn: "Ja, ich will!", popPh: "Ihre E-Mail-Adresse"
+            popBtn: "Ja, ich will!", popPh: "Ihre E-Mail-Adresse",
+            stepsTitle: "So funktioniert es", faqTitle: "Häufige Fragen",
+            discText: "Transparenz-Hinweis: Einige Links auf dieser Seite sind Affiliate-Links. Wenn Sie über diese Links kaufen, erhalten wir ggf. eine Provision. Für Sie entstehen keine zusätzlichen Kosten."
         },
         en: {
             siteName: "HealthPro",
-            nav_home: "Home", nav_products: "Products", nav_features: "About",
+            nav_home: "Home", nav_products: "Products", nav_features: "About", nav_blog: "Blog",
             badge: "Expert recommended",
             title: "Healthy living made easy",
             subtitle: "Scientifically based recommendations",
@@ -210,7 +252,9 @@
             footer: "Your health partner",
             popTitle: "💌 Exclusive for You!", popText: "Get free health tips!",
             popLi1: "✓ Free guides", popLi2: "✓ Exclusive coupons", popLi3: "✓ No spam",
-            popBtn: "Yes, I want!", popPh: "Your email address"
+            popBtn: "Yes, I want!", popPh: "Your email address",
+            stepsTitle: "How it works", faqTitle: "Frequently Asked Questions",
+            discText: "Transparency note: Some links on this page are affiliate links. If you buy via these links, we may receive a commission. There is no extra cost for you."
         }
     };
 
@@ -271,6 +315,7 @@
         document.querySelectorAll(".n a")[0].textContent = t.nav_home;
         document.querySelectorAll(".n a")[1].textContent = t.nav_products;
         document.querySelectorAll(".n a")[2].textContent = t.nav_features;
+        document.querySelectorAll(".n a")[3].textContent = t.nav_blog;
         document.getElementById("heroBadge").textContent = t.badge;
         document.getElementById("heroTitle").textContent = t.title;
         document.getElementById("heroSubtitle").textContent = t.subtitle;
@@ -290,6 +335,9 @@
         document.getElementById("popLi3").textContent = t.popLi3;
         document.getElementById("popBtn").textContent = t.popBtn;
         document.getElementById("popEmail").placeholder = t.popPh;
+        document.getElementById("stepsTitle").textContent = t.stepsTitle;
+        document.getElementById("faqTitle").textContent = t.faqTitle;
+        document.getElementById("discText").textContent = t.discText;
         
         // Features
         const fg = document.getElementById("featureGrid");
@@ -298,6 +346,37 @@
             <div style="text-align:center;padding:40px;background:#f8f9fc;border-radius:20px;"><h3>${t.feat2}</h3><p>${t.feat2t}</p></div>
             <div style="text-align:center;padding:40px;background:#f8f9fc;border-radius:20px;"><h3>${t.feat3}</h3><p>${t.feat3t}</p></div>
         `;
+
+        const trustItems = lang === "de"
+            ? ["🔎 Klare Produktauswahl statt Überforderung", "📚 Fokus auf evidenzbasierte Inhalte", "🌍 Deutsch + Englisch (umschaltbar)", "🛡️ Transparente Affiliate-Kennzeichnung"]
+            : ["🔎 Curated products instead of overwhelm", "📚 Focus on evidence-based content", "🌍 German + English (switchable)", "🛡️ Transparent affiliate disclosure"];
+        document.getElementById("trustGrid").innerHTML = trustItems.map(i => `<div class=\"trust-item\">${i}</div>`).join("");
+
+        const steps = lang === "de"
+            ? [
+                {t:"1) Ziel wählen",d:"Wählen Sie ein konkretes Ziel (z. B. Schlaf, Energie, Bauchfett)."},
+                {t:"2) Guide lesen",d:"Lesen Sie den passenden Blog-Artikel mit klaren Handlungsschritten."},
+                {t:"3) Produkt gezielt einsetzen",d:"Nutzen Sie passende Empfehlungen als Ergänzung – nicht als Ersatz für Basisgewohnheiten."}
+              ]
+            : [
+                {t:"1) Pick one goal",d:"Choose one concrete goal (sleep, energy, belly fat, recovery)."},
+                {t:"2) Read the guide",d:"Use the matching blog guide with practical action steps."},
+                {t:"3) Use products strategically",d:"Use recommendations as support, not a replacement for core habits."}
+              ];
+        document.getElementById("stepsGrid").innerHTML = steps.map((s,i)=>`<div class=\"step\"><span class=\"num\">${i+1}</span><h3>${s.t}</h3><p>${s.d}</p></div>`).join("");
+
+        const faqs = lang === "de"
+            ? [
+                {q:"Sind die Empfehlungen medizinischer Rat?",a:"Nein. Die Inhalte dienen der Information und ersetzen keine ärztliche Diagnose oder Behandlung."},
+                {q:"Verdient ihr an den Links?",a:"Ja, teilweise über Affiliate-Links. Für Sie bleibt der Preis gleich."},
+                {q:"Wie starte ich am besten?",a:"Wählen Sie ein Ziel, setzen Sie 1-2 Gewohnheiten um und messen Sie 14 Tage lang den Fortschritt."}
+              ]
+            : [
+                {q:"Is this medical advice?",a:"No. Content is educational and does not replace professional diagnosis or treatment."},
+                {q:"Do you earn from links?",a:"Yes, partly through affiliate links. Your price stays the same."},
+                {q:"How should I start?",a:"Pick one goal, implement 1-2 habits, and track results for 14 days."}
+              ];
+        document.getElementById("faqList").innerHTML = faqs.map(f=>`<details class=\"faq-item\"><summary>${f.q}</summary><p>${f.a}</p></details>`).join("");
         
         // Products
         const pg = document.getElementById("productGrid");
@@ -320,7 +399,7 @@
                         <span style="color:#dc3545;font-size:1.8rem;font-weight:700;">${p.price}</span>
                         ${p.per ? `<span style="font-size:0.9rem;color:#666;margin-left:5px;">${p.per}</span>` : ''}
                     </p>
-                    <a href="${p.link}" target="_blank" class="pbtn">${LABELS.view}</a>
+                    <a href="${p.link}" target="_blank" rel="nofollow sponsored noopener" class="pbtn">${LABELS.view}</a>
                 </div>
             </div>
         `).join("");
@@ -353,7 +432,7 @@
     function closePopup() { document.getElementById("popup").classList.remove("show"); }
     document.getElementById("popForm").addEventListener("submit", e => {
         e.preventDefault();
-        alert("Vielen Dank! Sie sind angemeldet.");
+        alert(lang === "de" ? "Vielen Dank! Sie sind angemeldet." : "Thanks! You're subscribed.");
         closePopup();
     });
 
@@ -368,7 +447,7 @@
     // Newsletter form
     document.getElementById("newsForm").addEventListener("submit", e => {
         e.preventDefault();
-        alert("Vielen Dank!");
+        alert(lang === "de" ? "Vielen Dank!" : "Thank you!");
     });
     </script>
 </body>
